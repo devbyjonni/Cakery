@@ -3,48 +3,72 @@
     "id": "1",
     "name": "Strawberry Swirl",
     "price": 39,
-    "image": "assets/images/products/singel-cake-1.jpg"
+    "image": "assets/images/products/singel-cake-1.jpg",
+    "category": "Cupcake",
+    "ingredients": ["Flour", "Sugar", "Strawberries", "Butter", "Eggs", "Vanilla"],
+    "description": "A fruity favorite with fresh strawberry flavor and creamy vanilla frosting."
   },
   {
     "id": "2",
     "name": "Chocolate Dream",
     "price": 42,
-    "image": "assets/images/products/singel-cake-2.jpg"
+    "image": "assets/images/products/singel-cake-2.jpg",
+    "category": "Cupcake",
+    "ingredients": ["Flour", "Cocoa Powder", "Sugar", "Butter", "Eggs", "Vanilla"],
+    "description": "Decadent and rich chocolate cupcake topped with silky ganache."
   },
   {
     "id": "3",
     "name": "Pastel Heaven",
     "price": 36,
-    "image": "assets/images/products/singel-cake-3.jpg"
+    "image": "assets/images/products/singel-cake-3.jpg",
+    "category": "Cupcake",
+    "ingredients": ["Flour", "Sugar", "Food Coloring", "Butter", "Eggs", "Vanilla"],
+    "description": "Soft pastel colors meet light vanilla sponge in this elegant treat."
   },
   {
     "id": "4",
     "name": "Caramel Cloud",
     "price": 39,
-    "image": "assets/images/products/singel-cake-4.jpg"
+    "image": "assets/images/products/singel-cake-4.jpg",
+    "category": "Cupcake",
+    "ingredients": ["Flour", "Sugar", "Caramel Sauce", "Butter", "Eggs", "Salt"],
+    "description": "Fluffy caramel cake with a sweet and salty finish."
   },
   {
     "id": "5",
     "name": "Rose Velvet",
     "price": 44,
-    "image": "assets/images/products/singel-cake-5.jpg"
+    "image": "assets/images/products/singel-cake-5.jpg",
+    "category": "Cupcake",
+    "ingredients": ["Flour", "Sugar", "Rose Extract", "Butter", "Eggs", "Pink Food Coloring"],
+    "description": "A floral twist on classic velvet—delicately flavored with rose."
   },
   {
     "id": "6",
     "name": "Mint Chocolate",
     "price": 38,
-    "image": "assets/images/products/singel-cake-6.jpg"
+    "image": "assets/images/products/singel-cake-6.jpg",
+    "category": "Cupcake",
+    "ingredients": ["Flour", "Sugar", "Mint Extract", "Cocoa Powder", "Butter", "Eggs"],
+    "description": "Cool mint meets bold chocolate in this refreshing cupcake combo."
   },
   {
     "id": "7",
     "name": "Berry Bliss",
     "price": 42,
-    "image": "assets/images/products/singel-cake-7.jpg"
+    "image": "assets/images/products/singel-cake-7.jpg",
+    "category": "Cupcake",
+    "ingredients": ["Flour", "Sugar", "Mixed Berries", "Butter", "Eggs", "Vanilla"],
+    "description": "Bursting with fresh berry flavor in every single bite."
   },
   {
     "id": "8",
     "name": "Fairy Whip",
     "price": 45,
-    "image": "assets/images/products/singel-cake-8.jpg"
+    "image": "assets/images/products/singel-cake-8.jpg",
+    "category": "Cupcake",
+    "ingredients": ["Flour", "Sugar", "Whipped Cream", "Butter", "Eggs", "Vanilla"],
+    "description": "Light, airy, and whipped to perfection—tastes like a dream."
   }
 ]

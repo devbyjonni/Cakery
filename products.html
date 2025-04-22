@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Our Products | Munamii Cakery</title>
     <link rel="stylesheet" href="css/style.css" />
-
-    <!-- Font Awesome (for cart icon) -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
@@ -41,11 +39,8 @@
     </section>
 
     <!-- Product Grid -->
-    <!-- Product Section -->
     <section class="product-cards">
-      <div class="card-grid" id="product-page-grid">
-        <!-- Products will be loaded here via JS -->
-      </div>
+      <div class="card-grid" id="product-page-grid"></div>
     </section>
 
     <!-- Footer -->
@@ -64,8 +59,50 @@
       </p>
     </footer>
 
-    <!-- Load Products & Cart Logic -->
+    <!-- Modal -->
+    <div class="modal-overlay" id="product-modal">
+      <div class="modal-content">
+        <button class="close-modal" id="close-modal">&times;</button>
+        <div class="modal-image">
+          <img id="modal-product-image" src="" alt="Product" />
+        </div>
+        <div class="modal-info">
+          <h2 id="modal-product-name"></h2>
+          <p id="modal-product-price"></p>
+          <p id="modal-product-description"></p>
+          <p id="modal-product-ingredients"></p>
+          <p id="modal-product-category"></p>
+          <button id="modal-add-to-cart" class="order-btn">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scripts -->
     <script>
+      let currentModalProduct = null;
+      const cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+      function saveCart() {
+        localStorage.setItem("cart", JSON.stringify(cart));
+        updateCartCount();
+      }
+
+      function updateCartCount() {
+        const count = cart.reduce((sum, item) => sum + item.quantity, 0);
+        const countEl = document.querySelector(".cart-count");
+        if (countEl) countEl.textContent = count;
+      }
+
+      function addToCart(product) {
+        const existing = cart.find((item) => item.id === product.id);
+        if (existing) {
+          existing.quantity += 1;
+        } else {
+          cart.push({ ...product, quantity: 1 });
+        }
+        saveCart();
+      }
+
       async function loadProducts() {
         const response = await fetch("assets/data/products.json");
         const products = await response.json();
@@ -78,8 +115,23 @@
             <img src="${product.image}" alt="${product.name}" />
             <h3>${product.name}</h3>
             <p>${product.price} kr</p>
-            <p class="product-quantity">In Cart: 0</p>
-            <a href="#order" class="product-btn" data-id="${product.id}" data-name="${product.name}" data-price="${product.price}" data-image="${product.image}">
+            <a href="#" class="product-btn view-details"
+              data-id="${product.id}"
+              data-name="${product.name}"
+              data-price="${product.price}"
+              data-image="${product.image}"
+              data-description="${product.description || "No description."}"
+              data-ingredients="${(product.ingredients || []).join(", ")}"
+              data-category="${product.category || ""}"
+            >
+              View Details
+            </a>
+            <a href="#order" class="product-btn add-to-cart"
+              data-id="${product.id}"
+              data-name="${product.name}"
+              data-price="${product.price}"
+              data-image="${product.image}"
+            >
               Add to Cart
             </a>
           `;
@@ -87,58 +139,71 @@
         });
       }
 
-      const cart = JSON.parse(localStorage.getItem("cart")) || [];
-
-      function saveCart() {
-        localStorage.setItem("cart", JSON.stringify(cart));
-        updateCartCount();
-      }
-
-      function updateCartCount() {
-        const count = cart.reduce((sum, item) => sum + item.quantity, 0);
-
-        // Log the total quantity in the cart
-        const totalQuantity = cart.reduce((sum, item) => {
-          // Ensure that each item has a valid quantity value
-          return sum + (item.quantity || 0);
-        }, 0);
-
-        console.log("Total quantity in cart: ", totalQuantity);
-
-        const countEl = document.querySelector(".cart-count");
-        if (countEl) countEl.textContent = totalQuantity;
-      }
-
-      // Add product to cart
-      function addToCart(product) {
-        const existingProduct = cart.find((item) => item.id === product.id);
-
-        if (existingProduct) {
-          existingProduct.quantity += 1;
-        } else {
-          cart.push({ ...product, quantity: 1 });
-        }
-        saveCart(); // Save updated cart
-      }
-
-      // Handle Add to Cart button click
       document.body.addEventListener("click", (e) => {
-        if (e.target.classList.contains("product-btn")) {
+        if (e.target.classList.contains("view-details")) {
           e.preventDefault();
-
+          const btn = e.target;
           const product = {
-            id: e.target.dataset.id,
-            name: e.target.dataset.name,
-            price: parseFloat(e.target.dataset.price),
-            image: e.target.dataset.image,
+            id: btn.dataset.id,
+            name: btn.dataset.name,
+            price: parseFloat(btn.dataset.price),
+            image: btn.dataset.image,
+            description: btn.dataset.description,
+            ingredients: btn.dataset.ingredients,
+            category: btn.dataset.category,
           };
 
-          console.log("Adding to cart:", product);
-          addToCart(product); // Add product to the cart
+          document.getElementById("modal-product-image").src = product.image;
+          document.getElementById("modal-product-name").textContent =
+            product.name;
+          document.getElementById(
+            "modal-product-price"
+          ).textContent = `${product.price} kr`;
+          document.getElementById("modal-product-description").textContent =
+            product.description;
+          document.getElementById("modal-product-ingredients").textContent =
+            "Ingredients: " + (product.ingredients || "N/A");
+          document.getElementById("modal-product-category").textContent =
+            "Category: " + (product.category || "N/A");
+
+          document.getElementById("modal-add-to-cart").onclick = () => {
+            addToCart(product);
+            closeModal();
+          };
+
+          document.getElementById("product-modal").classList.add("active");
+        }
+
+        if (e.target.classList.contains("add-to-cart")) {
+          e.preventDefault();
+          const btn = e.target;
+          const product = {
+            id: btn.dataset.id,
+            name: btn.dataset.name,
+            price: parseFloat(btn.dataset.price),
+            image: btn.dataset.image,
+          };
+          addToCart(product);
         }
       });
 
-      // Initialize on page load
+      document
+        .getElementById("modal-add-to-cart")
+        .addEventListener("click", () => {
+          if (currentModalProduct) {
+            addToCart(currentModalProduct);
+            closeModal();
+          }
+        });
+
+      function closeModal() {
+        document.getElementById("product-modal").classList.remove("active");
+      }
+
+      document
+        .getElementById("close-modal")
+        .addEventListener("click", closeModal);
+
       document.addEventListener("DOMContentLoaded", () => {
         loadProducts();
         updateCartCount();
