@@ -728,3 +728,100 @@ footer a:hover {
 .contact-socials i {
     font-size: 2rem;
 }
+
+/* ----------------------------------------
+   About Section
+---------------------------------------- */
+.about-section {
+    background: var(--pink-light);
+    padding: 4rem 1rem;
+    text-align: center;
+}
+
+.about-wrap {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.about-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: var(--pink-main);
+    margin-bottom: 1rem;
+}
+
+.about-text {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    color: var(--rich-chocolate-brown);
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-image {
+    margin-top: 2rem;
+    max-width: 700px;
+    width: 100%;
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* ----------------------------------------
+   About Section
+---------------------------------------- */
+.about-section {
+    background: var(--pink-light);
+    padding: 3rem 1rem;
+}
+
+.about-wrap {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.about-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: var(--pink-main);
+    margin-bottom: 1rem;
+}
+
+.about-text {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    color: var(--rich-chocolate-brown);
+    margin: 0 auto 2rem;
+    max-width: 700px;
+    line-height: 1.6;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+    padding: 0 1rem;
+}
+
+.about-card {
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 1rem;
+    padding: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    backdrop-filter: blur(4px);
+}
+
+.about-card img {
+    width: 100%;
+    border-radius: 0.75rem;
+    object-fit: cover;
+    margin-bottom: 0.75rem;
+}
+
+.about-caption {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.95rem;
+    color: var(--brown);
+}
