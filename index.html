@@ -8,16 +8,18 @@
       content="Munamii Cakery – Delicious cakes and cupcakes for every occasion"
     />
     <title>Munamii Cakery</title>
+
     <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap"
       rel="stylesheet"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Open+Sans&display=swap"
       rel="stylesheet"
     />
+
     <!-- Font Awesome -->
     <link
       rel="stylesheet"
@@ -26,40 +28,48 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+
     <!-- Main Stylesheet -->
     <link rel="stylesheet" href="css/style.css" />
   </head>
+
   <body>
+    <!-- Promo Banner -->
     <div class="promo-banner">
       <p><strong>🎉 50% OFF</strong> for all new customers – this week only!</p>
     </div>
 
+    <!-- Header -->
     <header>
       <div class="top-bar">
         <div class="logo hidden">
           <h1>Munamii Cakery</h1>
           <span class="tagline">Best cakes in the world</span>
         </div>
-
-        <div class="user-info">
-          <span class="username">Hi, Guest</span>
-          <a href="#" class="cart" aria-label="Cart">
-            <i class="fas fa-shopping-cart"></i>
-            <span class="cart-count">2</span>
-          </a>
-        </div>
       </div>
-
+      <!-- Nav -->
       <nav>
-        <ul class="nav-links">
-          <li><a href="index.html" class="active">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="products.html">Products</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
+        <div class="nav-container">
+          <div class="nav-left"></div>
+          <!-- optional empty spacer -->
+          <ul class="nav-links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+          <div class="user-info">
+            <span class="username">Hi, Guest</span>
+            <a href="#" class="cart" aria-label="Cart">
+              <i class="fas fa-shopping-cart"></i>
+              <span class="cart-count">2</span>
+            </a>
+          </div>
+        </div>
       </nav>
     </header>
 
+    <!-- Hero Section -->
     <section class="hero-wrapper">
       <div class="hero">
         <img
@@ -67,33 +77,108 @@
           alt="Decorated cake shop"
           class="hero-image"
         />
+        <!-- Logo -->
         <div class="hero-logo">
-          Munamii<br />
-          <span class="logo-gradient">Cakery</span>
-          <div class="logo-tagline">Baking dreams into reality</div>
+          <img
+            src="assets/images/logo.png"
+            alt="Munamii Cakery logo"
+            class="hero-logo-img"
+          />
           <div class="logo-stars">★★★★★</div>
+          <div class="logo-sale">Sale 50% Off</div>
+          <a href="#order" class="order-btn">Order Now</a>
         </div>
       </div>
 
-      <section class="featured-products">
-        <h2>Our Sweet Highlights</h2>
-        <div class="product-gallery">
-          <img
-            src="assets/images/products/singel-cake.jpg"
-            alt="Strawberry Swirl"
-          />
-          <img
-            src="assets/images/products/singel-cake.jpg"
-            alt="Chocolate Delight"
-          />
-          <img
-            src="assets/images/products/singel-cake.jpg"
-            alt="Pastel Dream"
-          />
+      <!-- Product Cards -->
+      <section class="product-section">
+        <div class="product-wrap">
+          <h2>Explore Our Creations</h2>
+          <p class="product-subtext">
+            From elegant wedding cakes to fun cupcakes, we have something for
+            every occasion. Check out our
+            <a href="products.html">Products</a> page to browse more.
+          </p>
+
+          <div class="card-grid">
+            <div class="product-card">
+              <img
+                src="assets/images/products/singel-cake-1.jpg"
+                alt="Strawberry Swirl"
+              />
+              <h3>Strawberry Swirl</h3>
+              <p>39 kr</p>
+              <a href="#order" class="product-btn">Order</a>
+            </div>
+            <div class="product-card">
+              <img
+                src="assets/images/products/singel-cake-2.jpg"
+                alt="Strawberry Swirl"
+              />
+              <h3>Strawberry Swirl</h3>
+              <p>39 kr</p>
+              <a href="#order" class="product-btn">Order</a>
+            </div>
+            <div class="product-card">
+              <img
+                src="assets/images/products/singel-cake-3.jpg"
+                alt="Strawberry Swirl"
+              />
+              <h3>Strawberry Swirl</h3>
+              <p>39 kr</p>
+              <a href="#order" class="product-btn">Order</a>
+            </div>
+            <div class="product-card">
+              <img
+                src="assets/images/products/singel-cake-4.jpg"
+                alt="Strawberry Swirl"
+              />
+              <h3>Strawberry Swirl</h3>
+              <p>39 kr</p>
+              <a href="#order" class="product-btn">Order</a>
+            </div>
+            <div class="product-card">
+              <img
+                src="assets/images/products/singel-cake-5.jpg"
+                alt="Strawberry Swirl"
+              />
+              <h3>Strawberry Swirl</h3>
+              <p>39 kr</p>
+              <a href="#order" class="product-btn">Order</a>
+            </div>
+            <div class="product-card">
+              <img
+                src="assets/images/products/singel-cake-6.jpg"
+                alt="Strawberry Swirl"
+              />
+              <h3>Strawberry Swirl</h3>
+              <p>39 kr</p>
+              <a href="#order" class="product-btn">Order</a>
+            </div>
+            <div class="product-card">
+              <img
+                src="assets/images/products/singel-cake-7.jpg"
+                alt="Strawberry Swirl"
+              />
+              <h3>Strawberry Swirl</h3>
+              <p>39 kr</p>
+              <a href="#order" class="product-btn">Order</a>
+            </div>
+            <div class="product-card">
+              <img
+                src="assets/images/products/singel-cake-8.jpg"
+                alt="Strawberry Swirl"
+              />
+              <h3>Strawberry Swirl</h3>
+              <p>39 kr</p>
+              <a href="#order" class="product-btn">Order</a>
+            </div>
+          </div>
         </div>
       </section>
     </section>
 
+    <!-- Intro Section -->
     <main>
       <section class="intro">
         <h2>Explore Our Creations</h2>
@@ -105,6 +190,7 @@
       </section>
     </main>
 
+    <!-- Footer -->
     <footer>
       <p>&copy; 2025 Munamii Cakery</p>
       <p>

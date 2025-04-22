@@ -51,13 +51,11 @@ body {
 .top-bar {
     display: flex;
     justify-content: flex-end;
-    /* only right-aligns content */
     align-items: center;
     padding: 0.5rem 2rem;
-    /* was 0.75rem 2rem */
     background: var(--pink-light);
     border-radius: 8px;
-    margin: 0.5rem auto;
+    margin: 0rem auto;
     max-width: 1200px;
 }
 
@@ -90,6 +88,11 @@ body {
     letter-spacing: 0.5px;
 }
 
+.user-info {
+    display: flex;
+    align-items: center;
+}
+
 .top-bar a {
     margin-left: 1rem;
     color: inherit;
@@ -101,22 +104,6 @@ body {
     outline: 2px dashed var(--pink-main);
     outline-offset: 4px;
     border-radius: 4px;
-}
-
-.social-icons i,
-.cart i {
-    font-size: 1.2rem;
-    color: var(--brown);
-}
-
-.social-icons i:hover,
-.cart i:hover {
-    color: var(--pink-main);
-}
-
-.user-info {
-    display: flex;
-    align-items: center;
 }
 
 .cart {
@@ -137,21 +124,28 @@ body {
 /* ----------------------------------------
    Navigation
 ---------------------------------------- */
-header {
+nav {
     background: var(--pink-light);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-    border-bottom: 2px solid #fff;
-    /* add white separator */
-    z-index: 10;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    /* padding: 0.3rem 2rem; */
+    padding-bottom: 1rem;
+    position: relative;
 }
 
 .nav-links {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
-    justify-content: center;
     gap: 2rem;
     list-style: none;
-    padding: 0.5rem 0;
-    /* was 1rem 0 */
 }
 
 .nav-links a {
@@ -160,14 +154,16 @@ header {
     transition: color 0.3s;
 }
 
-.nav-links a:hover {
-    text-decoration: underline;
-    color: var(--pink-main);
-}
-
+.nav-links a:hover,
 .nav-links a.active {
     color: var(--pink-main);
     text-decoration: underline;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 }
 
 /* ----------------------------------------
@@ -178,38 +174,87 @@ header {
 }
 
 .hero {
-    margin: 0 auto;
     position: relative;
+    max-height: 80vh;
+    /* adjust to crop more or less */
+    overflow: hidden;
+}
+
+.hero {
+    position: relative;
+    margin: 0 auto;
+    height: 75vh;
+    /* Or any value you prefer like 70vh, 60vh */
+    /* max-height: 700px; */
+    /* Optional cap */
+    overflow: hidden;
 }
 
 .hero-image {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: 50% 35%;
+    height: auto;
+    display: block;
+    transform: translateY(-20%);
+    /* this moves image up */
 }
 
-/* Logo Overlay in Hero */
+/* Hero Logo Image + Sale Text + CTA Button */
 .hero-logo {
     position: absolute;
-    top: 17%;
-    left: 6%;
-    transform: translateY(-30%);
-    font-family: 'Playfair Display', serif;
-    /* back to original font */
-    font-size: 3.3rem;
-    font-weight: 900;
-    /* text-transform: uppercase; */
-    line-height: 0.9;
-    color: var(--rich-chocolate-brown);
+    top: 20%;
+    left: 0%;
+    transform: translateY(-20%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
     z-index: 5;
+}
+
+.hero-logo-img {
+    width: 493px;
+    height: 319px;
+    object-fit: contain;
+    display: block;
+}
+
+.logo-stars {
+    font-size: 1.6rem;
+    color: var(--gold-soft);
+    margin-top: -7rem;
+    letter-spacing: 3px;
+}
+
+.logo-sale {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--rich-chocolate-brown);
+    margin-top: 1rem;
+    /* reduced spacing */
+}
+
+.order-btn {
+    display: inline-block;
+    margin-top: 0.5rem;
+    padding: 0.5rem 2rem;
+    background-color: var(--gold-soft);
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+    font-size: 1rem;
+
+}
+
+.order-btn:hover {
+    background-color: var(--pink-main);
 }
 
 .hero-logo .logo-gradient {
     background: linear-gradient(to right, var(--pink-main), var(--rich-pink-main));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-
 }
 
 .logo-tagline {
@@ -217,15 +262,8 @@ header {
     font-size: 1rem;
     font-weight: 800;
     color: var(--rich-chocolate-brown);
-    margin-top: 0.6rem;
+    margin-top: 0.8rem;
     letter-spacing: 0.5px;
-}
-
-.logo-stars {
-    font-size: 1.5rem;
-    color: var(--gold-soft);
-    margin-top: 0.4rem;
-    letter-spacing: 3px;
 }
 
 .hero-text {
@@ -254,7 +292,7 @@ header {
 }
 
 /* ----------------------------------------
-   Featured Products
+   Featured Products (Legacy if needed)
 ---------------------------------------- */
 .featured-products {
     position: absolute;
@@ -298,7 +336,61 @@ header {
 }
 
 /* ----------------------------------------
-   Main & Intro Section
+   Product Cards Section
+---------------------------------------- */
+.product-cards {
+    margin-top: 6rem;
+    padding: 0 2rem;
+    text-align: center;
+}
+
+.product-cards h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: var(--pink-main);
+    margin-bottom: 2rem;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.product-card {
+    background-color: #fff;
+    border-radius: 1rem;
+    padding: 0rem;
+    padding-bottom: 1rem;
+    transition: transform 0.35s ease;
+}
+
+.product-card:hover {
+    transform: scale(1.03);
+}
+
+.product-card img {
+    width: 100%;
+    border-radius: 0.75rem;
+    margin-bottom: 0rem;
+}
+
+.product-card h3 {
+    font-size: 1.2rem;
+    color: var(--rich-chocolate-brown);
+    margin: 0rem 0;
+}
+
+.product-card p {
+    font-size: 1rem;
+    color: var(--brown);
+    font-weight: 600;
+}
+
+/* ----------------------------------------
+   Main & Footer
 ---------------------------------------- */
 main {
     margin-top: 12rem;
@@ -329,9 +421,6 @@ main {
     text-decoration: underline;
 }
 
-/* ----------------------------------------
-   Footer
----------------------------------------- */
 footer {
     background: var(--pink-light);
     text-align: center;
@@ -349,4 +438,73 @@ footer a {
 footer a:hover {
     text-decoration: underline;
     color: var(--pink-main);
+}
+
+.product-section {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    transform: translateY(-6%);
+}
+
+.product-wrap {
+    background: linear-gradient(135deg, rgba(255, 240, 245, 0.7), rgba(255, 247, 249, 0.4));
+    border-radius: 1rem;
+    padding: 1rem 2rem;
+    width: 90%;
+    max-width: 1200px;
+    text-align: center;
+    backdrop-filter: blur(4px);
+}
+
+.product-wrap h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: var(--rich-pink-main);
+    margin-bottom: 0.5rem;
+}
+
+.product-subtext {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    color: var(--brown);
+    margin-bottom: 2rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+}
+
+.product-subtext a {
+    color: var(--brown);
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.product-stars {
+    font-size: 1.5rem;
+    color: var(--rich-chocolate-brown);
+    margin-bottom: 1.5rem;
+    letter-spacing: 3px;
+}
+
+/* ----------------------------------------
+   Product Card Button
+---------------------------------------- */
+.product-btn {
+    display: inline-block;
+    margin-top: 0.5rem;
+    padding: 0.4rem 2rem;
+    background-color: var(--pink-main);
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+    font-size: 0.95rem;
+}
+
+.product-btn:hover {
+    background-color: var(--rich-pink-main);
 }
