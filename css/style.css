@@ -519,29 +519,68 @@ footer a:hover {
    Gift Card Section
 ---------------------------------------- */
 .giftcard-section {
+    background: var(--pink-light);
     padding: 4rem 1rem;
-    background: var(--bg);
     text-align: center;
 }
 
 .giftcard-wrap {
-    max-width: 700px;
+    max-width: 1200px;
     margin: 0 auto;
+    padding: 0 2rem;
 }
 
-.giftcard-section h2 {
+.giftcard-wrap h2 {
     font-family: 'Playfair Display', serif;
     font-size: 2rem;
-    color: var(--pink-main);
-    margin-bottom: 1rem;
+    color: var(--rich-chocolate-brown);
+    margin-bottom: 0.5rem;
 }
 
 .giftcard-text {
     font-family: 'Open Sans', sans-serif;
     font-size: 1rem;
     color: var(--brown);
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
     line-height: 1.6;
+}
+
+.giftcard-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.giftcard-img img {
+    width: 100%;
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.giftcard-content {
+    text-align: center;
+}
+
+.giftcard-offer {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--rich-pink-main);
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+    .giftcard-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .giftcard-img img {
+        max-width: 100%;
+    }
 }
 
 /* ----------------------------------------
