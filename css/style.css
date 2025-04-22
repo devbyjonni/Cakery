@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 /* ----------------------------------------
    Reset & Base Styles
 ---------------------------------------- */
@@ -34,6 +38,7 @@ body {
 
 
 }
+
 
 /* ----------------------------------------
    Promo Banner
@@ -431,7 +436,7 @@ footer {
     background: var(--pink-light);
     text-align: center;
     padding: 2rem 1rem;
-    margin-top: 3rem;
+    margin-top: 0rem;
     font-size: 0.9rem;
 }
 
