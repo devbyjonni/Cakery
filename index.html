@@ -3,10 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta
-      name="description"
-      content="Munamii Cakery – Delicious cakes and cupcakes for every occasion"
-    />
     <title>Munamii Cakery</title>
 
     <!-- Google Fonts -->
@@ -38,32 +34,31 @@
       <p><strong>🎉 50% OFF</strong> for all new customers – this week only!</p>
     </div>
 
-    <!-- Header -->
+    <!-- Header & Navigation -->
     <header>
+      <button class="clear-cart-btn">Clear Cart</button>
       <div class="top-bar">
         <div class="logo hidden">
           <h1>Munamii Cakery</h1>
           <span class="tagline">Best cakes in the world</span>
         </div>
       </div>
-
-      <!-- Navigation -->
       <nav>
         <div class="nav-container">
           <div class="nav-left"></div>
           <ul class="nav-links">
-            <li><a href="#home" class="nav-link">Home</a></li>
-            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
             <li><a href="products.html">Products</a></li>
-            <!-- external -->
-            <li><a href="#giftcard" class="nav-link">Gift Card</a></li>
-            <li><a href="#contact" class="nav-link">Contact</a></li>
+            <li><a href="#giftcard">Gift Card</a></li>
+            <li><a href="#contact">Contact</a></li>
           </ul>
           <div class="user-info">
             <span class="username">Hi, Guest</span>
             <a href="#" class="cart" aria-label="Cart">
               <i class="fas fa-shopping-cart"></i>
-              <span class="cart-count">2</span>
+              <span class="cart-count">0</span>
+              <!-- Cart count will be updated dynamically -->
             </a>
           </div>
         </div>
@@ -71,7 +66,7 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="hero-wrapper">
+    <section class="hero-wrapper" id="home">
       <div class="hero">
         <img
           src="assets/images/hero.jpg"
@@ -91,7 +86,6 @@
       </div>
     </section>
 
-    <!-- Main Content -->
     <main>
       <!-- Product Section -->
       <section class="product-section" id="products">
@@ -102,216 +96,7 @@
             every occasion. Check out our
             <a href="products.html">Products</a> page to browse more.
           </p>
-
-          <div class="card-grid">
-            <!-- Repeat your 8 product cards -->
-            <!-- Example -->
-            <div class="product-card">
-              <img
-                src="assets/images/products/singel-cake-1.jpg"
-                alt="Strawberry Swirl"
-              />
-              <h3>Strawberry Swirl</h3>
-              <p>39 kr</p>
-              <a href="#order" class="product-btn">Order</a>
-            </div>
-            <div class="product-card">
-              <img
-                src="assets/images/products/singel-cake-2.jpg"
-                alt="Strawberry Swirl"
-              />
-              <h3>Strawberry Swirl</h3>
-              <p>39 kr</p>
-              <a href="#order" class="product-btn">Order</a>
-            </div>
-            <div class="product-card">
-              <img
-                src="assets/images/products/singel-cake-3.jpg"
-                alt="Strawberry Swirl"
-              />
-              <h3>Strawberry Swirl</h3>
-              <p>39 kr</p>
-              <a href="#order" class="product-btn">Order</a>
-            </div>
-            <div class="product-card">
-              <img
-                src="assets/images/products/singel-cake-4.jpg"
-                alt="Strawberry Swirl"
-              />
-              <h3>Strawberry Swirl</h3>
-              <p>39 kr</p>
-              <a href="#order" class="product-btn">Order</a>
-            </div>
-            <div class="product-card">
-              <img
-                src="assets/images/products/singel-cake-5.jpg"
-                alt="Strawberry Swirl"
-              />
-              <h3>Strawberry Swirl</h3>
-              <p>39 kr</p>
-              <a href="#order" class="product-btn">Order</a>
-            </div>
-            <div class="product-card">
-              <img
-                src="assets/images/products/singel-cake-6.jpg"
-                alt="Strawberry Swirl"
-              />
-              <h3>Strawberry Swirl</h3>
-              <p>39 kr</p>
-              <a href="#order" class="product-btn">Order</a>
-            </div>
-            <div class="product-card">
-              <img
-                src="assets/images/products/singel-cake-7.jpg"
-                alt="Strawberry Swirl"
-              />
-              <h3>Strawberry Swirl</h3>
-              <p>39 kr</p>
-              <a href="#order" class="product-btn">Order</a>
-            </div>
-            <div class="product-card">
-              <img
-                src="assets/images/products/singel-cake-8.jpg"
-                alt="Strawberry Swirl"
-              />
-              <h3>Strawberry Swirl</h3>
-              <p>39 kr</p>
-              <a href="#order" class="product-btn">Order</a>
-            </div>
-            <!-- ... (repeat for the rest) -->
-          </div>
-        </div>
-      </section>
-
-      <!-- Gift Card Section -->
-      <section class="giftcard-section" id="giftcard">
-        <div class="giftcard-wrap">
-          <h2>Give the Gift of Sweetness</h2>
-          <p class="giftcard-text">
-            Surprise your loved ones with a treat they’ll never forget. Our
-            elegant gift cards are perfect for birthdays, weddings, and any
-            sweet celebration.
-          </p>
-          <div class="giftcard-grid">
-            <div class="giftcard-img">
-              <img src="assets/images/gift-card-box.jpg" alt="Gift Card Box" />
-            </div>
-            <div class="giftcard-content">
-              <p class="giftcard-offer">✨ Available in-store & online ✨</p>
-              <a href="#order" class="order-btn">Buy a Gift Card</a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- About Section -->
-      <section class="about-section" id="about">
-        <div class="about-wrap">
-          <h2>About Munamii</h2>
-          <p class="about-text">
-            At Munamii Cakery, we believe every celebration deserves a sweet
-            centerpiece. Our journey started in a small kitchen with a big dream
-            — to craft beautiful, delicious treats that bring joy to every bite.
-          </p>
-
-          <div class="about-grid">
-            <div class="about-card">
-              <img src="assets/images/our-team.jpg" alt="Our Team" />
-              <p class="about-caption">
-                Meet our warm-hearted team in the Munamii kitchen
-              </p>
-            </div>
-            <div class="about-card">
-              <img src="assets/images/our-bakery.jpg" alt="Our Bakery" />
-              <p class="about-caption">
-                A peek into our charming cakery filled with joy
-              </p>
-            </div>
-            <div class="about-card">
-              <img
-                src="assets/images/about-kitchen.jpg"
-                alt="Cupcake Decorating"
-              />
-              <p class="about-caption">
-                Every cake handcrafted with love and detail
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Contact Section -->
-      <section class="contact-section" id="contact">
-        <div class="contact-container">
-          <div class="contact-wrap">
-            <h2>Contact Us</h2>
-            <p class="contact-text">
-              We'd love to hear from you! Whether you have questions, custom
-              orders, or just want to say hi.
-            </p>
-            <div class="contact-socials">
-              <a
-                href="https://facebook.com/munamiicupcakes"
-                target="_blank"
-                aria-label="Facebook"
-              >
-                <i class="fab fa-facebook-f"></i>
-              </a>
-              <a
-                href="https://instagram.com/munamii.cakery"
-                target="_blank"
-                aria-label="Instagram"
-              >
-                <i class="fab fa-instagram"></i>
-              </a>
-            </div>
-
-            <div class="locations-wrap">
-              <div class="contact-two-column">
-                <!-- Left: Map -->
-                <div class="location-card">
-                  <h3>New York</h3>
-                  <iframe
-                    src="https://www.google.com/maps/embed?pb=..."
-                    width="100%"
-                    height="200"
-                    style="border: 0; border-radius: 8px"
-                    allowfullscreen=""
-                    loading="lazy"
-                  ></iframe>
-                  <p>
-                    <strong>Address:</strong> 123 Cupcake Lane, New York, NY
-                  </p>
-                  <p><strong>Phone:</strong> (212) 555-1234</p>
-                </div>
-
-                <!-- Right: Contact Form -->
-                <div class="contact-form-card">
-                  <h3>Send a Message</h3>
-                  <form class="contact-form">
-                    <input
-                      type="text"
-                      name="name"
-                      placeholder="Your Name"
-                      required
-                    />
-                    <input
-                      type="email"
-                      name="email"
-                      placeholder="Your Email"
-                      required
-                    />
-                    <textarea
-                      name="message"
-                      rows="4"
-                      placeholder="Your Message"
-                    ></textarea>
-                    <button type="submit" class="order-btn">Send</button>
-                  </form>
-                </div>
-              </div>
-            </div>
-          </div>
+          <div class="card-grid"></div>
         </div>
       </section>
     </main>
@@ -331,5 +116,33 @@
         <a href="mailto:info@munamiicakery.com">Email Us</a>
       </p>
     </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/cart.js"></script>
+    <script>
+      async function loadProducts() {
+        const response = await fetch("assets/data/products.json");
+        const products = await response.json();
+        const grid = document.querySelector(".card-grid");
+
+        products.forEach((product) => {
+          const card = document.createElement("div");
+          card.className = "product-card";
+          card.innerHTML = `
+            <img src="${product.image}" alt="${product.name}" />
+            <h3>${product.name}</h3>
+            <p>${product.price} kr</p>
+            <p class="product-quantity">In Cart: 0</p>
+            <a href="#order" class="product-btn" data-id="${product.id}" data-name="${product.name}" data-price="${product.price}" data-image="${product.image}">
+              Add to Cart
+            </a>
+          `;
+          grid.appendChild(card);
+        });
+      }
+
+      document.addEventListener("DOMContentLoaded", loadProducts);
+      document.addEventListener("DOMContentLoaded", updateCartCount);
+    </script>
   </body>
 </html>

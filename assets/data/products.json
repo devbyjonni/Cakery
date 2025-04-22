@@ -1,0 +1,50 @@
+[
+  {
+    "id": "1",
+    "name": "Strawberry Swirl",
+    "price": 39,
+    "image": "assets/images/products/singel-cake-1.jpg"
+  },
+  {
+    "id": "2",
+    "name": "Chocolate Dream",
+    "price": 42,
+    "image": "assets/images/products/singel-cake-2.jpg"
+  },
+  {
+    "id": "3",
+    "name": "Pastel Heaven",
+    "price": 36,
+    "image": "assets/images/products/singel-cake-3.jpg"
+  },
+  {
+    "id": "4",
+    "name": "Caramel Cloud",
+    "price": 39,
+    "image": "assets/images/products/singel-cake-4.jpg"
+  },
+  {
+    "id": "5",
+    "name": "Rose Velvet",
+    "price": 44,
+    "image": "assets/images/products/singel-cake-5.jpg"
+  },
+  {
+    "id": "6",
+    "name": "Mint Chocolate",
+    "price": 38,
+    "image": "assets/images/products/singel-cake-6.jpg"
+  },
+  {
+    "id": "7",
+    "name": "Berry Bliss",
+    "price": 42,
+    "image": "assets/images/products/singel-cake-7.jpg"
+  },
+  {
+    "id": "8",
+    "name": "Fairy Whip",
+    "price": 45,
+    "image": "assets/images/products/singel-cake-8.jpg"
+  }
+]

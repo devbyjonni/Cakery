@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Our Products | Munamii Cakery</title>
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Font Awesome (for cart icon) -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+
+  <body>
+    <!-- Navigation -->
+    <nav class="simple-nav">
+      <div class="simple-nav-wrap">
+        <a href="index.html" class="back-link">← Back to Home</a>
+      </div>
+      <div class="user-info">
+        <span class="username">Hi, Guest</span>
+        <a href="#" class="cart" aria-label="Cart">
+          <i class="fas fa-shopping-cart"></i>
+          <span class="cart-count">0</span>
+        </a>
+      </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="product-header">
+      <div class="product-header-wrap">
+        <h1>Our Delicious Creations</h1>
+        <p class="product-subtext">
+          Cupcakes, cakes, and more to make your day sweeter.
+        </p>
+      </div>
+    </section>
+
+    <!-- Product Grid -->
+    <!-- Product Section -->
+    <section class="product-cards">
+      <div class="card-grid" id="product-page-grid">
+        <!-- Products will be loaded here via JS -->
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2025 Munamii Cakery</p>
+      <p>
+        <a href="https://instagram.com/munamii.cakery" target="_blank"
+          >Instagram</a
+        >
+        |
+        <a href="https://facebook.com/munamiicupcakes" target="_blank"
+          >Facebook</a
+        >
+        |
+        <a href="mailto:info@munamiicakery.com">Email Us</a>
+      </p>
+    </footer>
+
+    <!-- Load Products & Cart Logic -->
+    <script>
+      async function loadProducts() {
+        const response = await fetch("assets/data/products.json");
+        const products = await response.json();
+        const grid = document.querySelector(".card-grid");
+
+        products.forEach((product) => {
+          const card = document.createElement("div");
+          card.className = "product-card";
+          card.innerHTML = `
+            <img src="${product.image}" alt="${product.name}" />
+            <h3>${product.name}</h3>
+            <p>${product.price} kr</p>
+            <p class="product-quantity">In Cart: 0</p>
+            <a href="#order" class="product-btn" data-id="${product.id}" data-name="${product.name}" data-price="${product.price}" data-image="${product.image}">
+              Add to Cart
+            </a>
+          `;
+          grid.appendChild(card);
+        });
+      }
+
+      const cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+      function saveCart() {
+        localStorage.setItem("cart", JSON.stringify(cart));
+        updateCartCount();
+      }
+
+      function updateCartCount() {
+        const count = cart.reduce((sum, item) => sum + item.quantity, 0);
+
+        // Log the total quantity in the cart
+        const totalQuantity = cart.reduce((sum, item) => {
+          // Ensure that each item has a valid quantity value
+          return sum + (item.quantity || 0);
+        }, 0);
+
+        console.log("Total quantity in cart: ", totalQuantity);
+
+        const countEl = document.querySelector(".cart-count");
+        if (countEl) countEl.textContent = totalQuantity;
+      }
+
+      // Add product to cart
+      function addToCart(product) {
+        const existingProduct = cart.find((item) => item.id === product.id);
+
+        if (existingProduct) {
+          existingProduct.quantity += 1;
+        } else {
+          cart.push({ ...product, quantity: 1 });
+        }
+        saveCart(); // Save updated cart
+      }
+
+      // Handle Add to Cart button click
+      document.body.addEventListener("click", (e) => {
+        if (e.target.classList.contains("product-btn")) {
+          e.preventDefault();
+
+          const product = {
+            id: e.target.dataset.id,
+            name: e.target.dataset.name,
+            price: parseFloat(e.target.dataset.price),
+            image: e.target.dataset.image,
+          };
+
+          console.log("Adding to cart:", product);
+          addToCart(product); // Add product to the cart
+        }
+      });
+
+      // Initialize on page load
+      document.addEventListener("DOMContentLoaded", () => {
+        loadProducts();
+        updateCartCount();
+      });
+    </script>
+  </body>
+</html>
