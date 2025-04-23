@@ -1,0 +1,173 @@
+html {
+    scroll-behavior: smooth;
+}
+
+section[id] {
+    scroll-margin-top: 120px;
+    /* offset for sticky nav */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: var(--text, #333);
+    line-height: 1.6;
+    background-color: var(--bg, #fff7f9);
+}
+
+:root {
+    --pink-light: #fff0f5;
+    --pink-main: #d64588;
+    --cream: #fbeec1;
+    --gold-soft: #e6c17b;
+    --brown: #a0522d;
+    --text: #333;
+    --bg: #fff7f9;
+    --rich-chocolate-brown: #4c1f1a;
+    --rich-pink-main: #9c3263;
+    --dark-chocolate: #5A3330;
+    --pink-soft: #EFB5D0;
+}
+
+/* ----------------------------------------
+   Typography: Headings
+---------------------------------------- */
+
+h1,
+.heading-1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+h2,
+.heading-2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+h3,
+.heading-3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+}
+
+h4,
+.heading-4 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+h5,
+.heading-5,
+h6,
+.heading-6 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+/* ----------------------------------------
+   Heading Colors: Primary & Secondary
+---------------------------------------- */
+
+.heading-primary {
+    color: var(--pink-main);
+}
+
+.heading-secondary {
+    color: var(--rich-chocolate-brown);
+}
+
+/* Base text classes */
+.text-base {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--text);
+}
+
+.text-small {
+    font-size: 0.875rem;
+}
+
+.text-large {
+    font-size: 1.125rem;
+}
+
+/* Emphasis variations */
+.text-bold {
+    font-weight: 700;
+}
+
+.text-semibold {
+    font-weight: 600;
+}
+
+.text-light {
+    font-weight: 400;
+}
+
+/* ----------------------------------------
+   Text Color Variants
+---------------------------------------- */
+
+.text-base {
+    color: var(--rich-chocolate-brown);
+}
+
+.text-primary {
+    color: var(--pink-main);
+}
+
+.text-secondary {
+    color: var(--brown);
+}
+
+.text-accent {
+    color: var(--gold-soft);
+}
+
+.text-muted {
+    color: #777;
+}
+
+/* ----------------------------------------
+   Typography: Headings & Text
+---------------------------------------- */
+
+/* Primary Titles */
+.title-primary {
+    font-family: 'Abril Fatface', cursive;
+    font-size: 2rem;
+    color: var(--pink-main);
+    margin-bottom: 1rem;
+}
+
+/* Secondary Titles */
+.title-secondary {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    color: var(--rich-chocolate-brown);
+    margin-bottom: 0.5rem;
+}
+
+/* Body text */
+.text-base {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+}

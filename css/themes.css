@@ -1,0 +1,41 @@
+/* ----------------------------------------
+   Color Variables & Theme Settings
+---------------------------------------- */
+
+:root {
+    --pink-light: #fff0f5;
+    --pink-main: #d64588;
+    --cream: #fbeec1;
+    --gold-soft: #e6c17b;
+    --brown: #a0522d;
+    --text: #333;
+    --bg: #fff7f9;
+    --rich-chocolate-brown: #4c1f1a;
+    --rich-pink-main: #9c3263;
+    --dark-chocolate: #5A3330;
+    --pink-soft: #EFB5D0;
+
+    /* Typography */
+    --font-body: 'Open Sans', sans-serif;
+    --font-heading: 'Playfair Display', serif;
+}
+
+/* ----------------------------------------
+   Dark Mode (Optional Future Add)
+---------------------------------------- */
+
+/* 
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #2e2e2e;
+    --text: #f3f3f3;
+    --pink-main: #ff69b4;
+    --brown: #deb887;
+  }
+
+  body {
+    background-color: var(--bg);
+    color: var(--text);
+  }
+}
+*/

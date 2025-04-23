@@ -4,35 +4,50 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Our Products | Munamii Cakery</title>
-    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="css/main.css" />
   </head>
 
   <body>
     <!-- Navigation -->
     <nav class="simple-nav">
       <div class="simple-nav-wrap">
-        <a href="index.html" class="back-link">← Back to Home</a>
-      </div>
-      <div class="user-info">
-        <span class="username">Hi, Guest</span>
-        <a href="#" class="cart" aria-label="Cart">
-          <i class="fas fa-shopping-cart"></i>
-          <span class="cart-count">0</span>
-        </a>
+        <a href="index.html" class="link-secondary">← Back to Home</a>
+        <div class="user-info">
+          <span class="text-base">Hi, Guest</span>
+          <a href="#" class="cart" aria-label="Cart">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="cart-count">0</span>
+          </a>
+        </div>
       </div>
     </nav>
 
     <!-- Page Header -->
     <section class="product-header">
       <div class="product-header-wrap">
-        <h1>Our Delicious Creations</h1>
-        <p class="product-subtext">
+        <h1 class="heading-1 heading-primary">Our Delicious Creations</h1>
+        <p class="text-base text-secondary">
           Cupcakes, cakes, and more to make your day sweeter.
         </p>
       </div>
@@ -59,155 +74,35 @@
       </p>
     </footer>
 
-    <!-- Modal -->
-    <div class="modal-overlay" id="product-modal">
-      <div class="modal-content">
-        <button class="close-modal" id="close-modal">&times;</button>
+    <!-- Product Detail Modal -->
+    <div class="modal modal-overlay" id="product-modal">
+      <div class="modal-box modal-content">
+        <button
+          class="modal-close close-modal"
+          id="close-modal"
+          aria-label="Close modal"
+        >
+          &times;
+        </button>
         <div class="modal-image">
           <img id="modal-product-image" src="" alt="Product" />
         </div>
         <div class="modal-info">
-          <h2 id="modal-product-name"></h2>
-          <p id="modal-product-price"></p>
-          <p id="modal-product-description"></p>
-          <p id="modal-product-ingredients"></p>
-          <p id="modal-product-category"></p>
-          <button id="modal-add-to-cart" class="order-btn">Add to Cart</button>
+          <h2 id="modal-product-name" class="title-secondary"></h2>
+          <p id="modal-product-price" class="text-base text-secondary"></p>
+          <p id="modal-product-description" class="text-base">
+            No description available.
+          </p>
+          <p id="modal-product-ingredients" class="text-base"></p>
+          <p id="modal-product-category" class="text-base text-secondary"></p>
+          <button id="modal-add-to-cart" class="btn btn-primary">
+            Add to Cart
+          </button>
         </div>
       </div>
     </div>
 
-    <!-- Scripts -->
-    <script>
-      let currentModalProduct = null;
-      const cart = JSON.parse(localStorage.getItem("cart")) || [];
-
-      function saveCart() {
-        localStorage.setItem("cart", JSON.stringify(cart));
-        updateCartCount();
-      }
-
-      function updateCartCount() {
-        const count = cart.reduce((sum, item) => sum + item.quantity, 0);
-        const countEl = document.querySelector(".cart-count");
-        if (countEl) countEl.textContent = count;
-      }
-
-      function addToCart(product) {
-        const existing = cart.find((item) => item.id === product.id);
-        if (existing) {
-          existing.quantity += 1;
-        } else {
-          cart.push({ ...product, quantity: 1 });
-        }
-        saveCart();
-      }
-
-      async function loadProducts() {
-        const response = await fetch("assets/data/products.json");
-        const products = await response.json();
-        const grid = document.querySelector(".card-grid");
-
-        products.forEach((product) => {
-          const card = document.createElement("div");
-          card.className = "product-card";
-          card.innerHTML = `
-            <img src="${product.image}" alt="${product.name}" />
-            <h3>${product.name}</h3>
-            <p>${product.price} kr</p>
-            <a href="#" class="product-btn view-details"
-              data-id="${product.id}"
-              data-name="${product.name}"
-              data-price="${product.price}"
-              data-image="${product.image}"
-              data-description="${product.description || "No description."}"
-              data-ingredients="${(product.ingredients || []).join(", ")}"
-              data-category="${product.category || ""}"
-            >
-              View Details
-            </a>
-            <a href="#order" class="product-btn add-to-cart"
-              data-id="${product.id}"
-              data-name="${product.name}"
-              data-price="${product.price}"
-              data-image="${product.image}"
-            >
-              Add to Cart
-            </a>
-          `;
-          grid.appendChild(card);
-        });
-      }
-
-      document.body.addEventListener("click", (e) => {
-        if (e.target.classList.contains("view-details")) {
-          e.preventDefault();
-          const btn = e.target;
-          const product = {
-            id: btn.dataset.id,
-            name: btn.dataset.name,
-            price: parseFloat(btn.dataset.price),
-            image: btn.dataset.image,
-            description: btn.dataset.description,
-            ingredients: btn.dataset.ingredients,
-            category: btn.dataset.category,
-          };
-
-          document.getElementById("modal-product-image").src = product.image;
-          document.getElementById("modal-product-name").textContent =
-            product.name;
-          document.getElementById(
-            "modal-product-price"
-          ).textContent = `${product.price} kr`;
-          document.getElementById("modal-product-description").textContent =
-            product.description;
-          document.getElementById("modal-product-ingredients").textContent =
-            "Ingredients: " + (product.ingredients || "N/A");
-          document.getElementById("modal-product-category").textContent =
-            "Category: " + (product.category || "N/A");
-
-          document.getElementById("modal-add-to-cart").onclick = () => {
-            addToCart(product);
-            closeModal();
-          };
-
-          document.getElementById("product-modal").classList.add("active");
-        }
-
-        if (e.target.classList.contains("add-to-cart")) {
-          e.preventDefault();
-          const btn = e.target;
-          const product = {
-            id: btn.dataset.id,
-            name: btn.dataset.name,
-            price: parseFloat(btn.dataset.price),
-            image: btn.dataset.image,
-          };
-          addToCart(product);
-        }
-      });
-
-      document
-        .getElementById("modal-add-to-cart")
-        .addEventListener("click", () => {
-          if (currentModalProduct) {
-            addToCart(currentModalProduct);
-            closeModal();
-          }
-        });
-
-      function closeModal() {
-        document.getElementById("product-modal").classList.remove("active");
-      }
-
-      document
-        .getElementById("close-modal")
-        .addEventListener("click", closeModal);
-
-      document.addEventListener("DOMContentLoaded", () => {
-        loadProducts();
-        updateCartCount();
-      });
-    </script>
+    <!-- JS -->
+    <script type="module" src="js/main.js"></script>
   </body>
 </html>
