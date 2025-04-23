@@ -1,0 +1,363 @@
+/* ----------------------------------------
+   Hero Section
+---------------------------------------- */
+.hero-wrapper {
+    position: relative;
+}
+
+.hero {
+    position: relative;
+    height: 75vh;
+    overflow: hidden;
+}
+
+.hero-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    transform: translateY(-20%);
+}
+
+.hero-logo {
+    position: absolute;
+    top: 20%;
+    left: 0;
+    transform: translateY(-20%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    z-index: 5;
+}
+
+.hero-logo-img {
+    width: 493px;
+    height: 319px;
+    object-fit: contain;
+}
+
+.logo-stars {
+    font-size: 1.6rem;
+    color: var(--gold-soft);
+    margin-top: -7rem;
+    letter-spacing: 3px;
+}
+
+.logo-sale {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--rich-chocolate-brown);
+    margin-top: 1rem;
+}
+
+
+/* ----------------------------------------
+   Product Section
+---------------------------------------- */
+.product-section {
+    display: flex;
+    justify-content: center;
+    padding: 2rem 1rem;
+    background: #fff7f9;
+    position: relative;
+    z-index: 2;
+    transform: translateY(-6%);
+}
+
+.product-wrap {
+    background: linear-gradient(135deg,
+            rgba(255, 240, 245, 0.7),
+            rgba(255, 247, 249, 0.4));
+    border-radius: 1rem;
+    padding: 1rem 2rem;
+    width: 90%;
+    max-width: 1200px;
+    text-align: center;
+    backdrop-filter: blur(4px);
+}
+
+.product-wrap .text-base {
+    margin: 0 auto 2rem;
+    max-width: 700px;
+    line-height: 1.6;
+}
+
+.more-products-btn-wrap {
+    display: flex;
+    justify-content: center;
+    padding-top: 2rem;
+}
+
+
+/* ----------------------------------------
+   Gift Card Section
+---------------------------------------- */
+.giftcard-section {
+    background: var(--pink-light);
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.giftcard-wrap {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.giftcard-wrap h2 {
+    margin-bottom: 0.5rem;
+}
+
+.giftcard-wrap .text-base {
+    margin: 0 auto 2rem;
+    max-width: 700px;
+    line-height: 1.6;
+}
+
+.giftcard-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.giftcard-img img {
+    width: 100%;
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.giftcard-content {
+    text-align: center;
+}
+
+.giftcard-offer {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--rich-pink-main);
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+    .giftcard-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .giftcard-img img {
+        max-width: 100%;
+    }
+}
+
+/* ----------------------------------------
+   Contact Section
+---------------------------------------- */
+.contact-section {
+    background: var(--pink-light);
+    padding: 4rem 1rem;
+}
+
+.contact-wrap {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 2rem;
+}
+
+.contact-wrap h2 {
+    margin-bottom: 0.5rem;
+}
+
+.contact-wrap .text-base {
+    margin: 0 auto 2rem;
+    max-width: 700px;
+    line-height: 1.6;
+}
+
+.contact-two-column {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 2rem auto 0;
+    padding: 0 2rem;
+}
+
+@media (max-width: 768px) {
+    .contact-two-column {
+        grid-template-columns: 1fr;
+    }
+}
+
+.contact-form-card {
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    backdrop-filter: blur(6px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    text-align: left;
+    transition: transform 0.3s;
+}
+
+.contact-form-card:hover {
+    transform: translateY(-4px);
+}
+
+.contact-form-card h3 {
+    margin-bottom: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-family: 'Open Sans', sans-serif;
+    background: #fff;
+    color: var(--text);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form button {
+    padding: 0.6rem 2rem;
+    color: white;
+    font-weight: 600;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: var(--rich-pink-main);
+    box-shadow: 0 4px 12px rgba(214, 69, 136, 0.4);
+}
+
+.contact-socials {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.contact-socials a {
+    color: var(--pink-main);
+    font-size: 1.8rem;
+    transition: color 0.3s ease;
+}
+
+.contact-socials a:hover {
+    color: var(--rich-pink-main);
+}
+
+.contact-socials i {
+    font-size: 2rem;
+}
+
+
+/* ----------------------------------------
+   Locations
+---------------------------------------- */
+.locations-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+@media (max-width: 992px) {
+    .locations-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .locations-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.location-card {
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    backdrop-filter: blur(6px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    text-align: left;
+    transition: transform 0.3s;
+}
+
+.location-card:hover {
+    transform: translateY(-4px);
+}
+
+.location-card h3 {
+    margin-bottom: 0.8rem;
+}
+
+.location-card p {
+    font-size: 0.95rem;
+    color: var(--rich-chocolate-brown);
+    margin-top: 0.5rem;
+}
+
+
+/* ----------------------------------------
+   About Section
+---------------------------------------- */
+.about-section {
+    background: var(--pink-light);
+    padding: 4rem 1rem;
+    text-align: center;
+}
+
+.about-wrap {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.about-wrap h2 {
+    margin-bottom: 1rem;
+}
+
+.about-wrap .text-base {
+    margin: 0 auto 2rem;
+    max-width: 700px;
+    line-height: 1.6;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+    padding: 0 1rem;
+}
+
+.about-card {
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 1rem;
+    padding: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    backdrop-filter: blur(4px);
+}
+
+.about-card img {
+    width: 100%;
+    border-radius: 0.75rem;
+    object-fit: cover;
+    margin-bottom: 0.75rem;
+}
+
+.about-caption {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.95rem;
+    color: var(--brown);
+}
