@@ -1,0 +1,40 @@
+/* ===========================================
+   Social Connect Section
+=========================================== */
+
+.social-connect-outer-wrapper {
+    background-color: var(--color-surface);
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.social-connect-inner-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.social-connect-title {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: var(--color-text);
+}
+
+.social-connect-inner-wrapper .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.social-connect-inner-wrapper .social-links a {
+    font-size: 2.5rem;
+    color: var(--color-muted-text);
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-connect-inner-wrapper .social-links a:hover {
+    color: var(--color-primary);
+    transform: scale(1.1);
+}

@@ -1,0 +1,55 @@
+/* ===========================================
+   Site Branding
+=========================================== */
+.site-brand {
+    flex-shrink: 0;
+}
+
+.site-brand h1 a {
+    font-size: 1.5rem;
+    color: var(--color-text);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* === Default: Show light logo, hide dark logo === */
+.light-logo {
+    display: block;
+}
+
+.dark-logo {
+    display: none;
+}
+
+/* === In Dark Mode: Hide light logo, show dark logo === */
+body.dark-mode .light-logo {
+    display: none;
+}
+
+body.dark-mode .dark-logo {
+    display: block;
+}
+
+/* ===========================================
+   Logo Styling
+=========================================== */
+/* === Logo Link === */
+.logo-link {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+/* === Logo Image === */
+.logo-image {
+    display: block;
+    height: auto;
+    max-width: 160px;
+}
+
+/* === Responsive Logo === */
+@media (max-width: 768px) {
+    .logo-image {
+        max-width: 120px;
+    }
+}

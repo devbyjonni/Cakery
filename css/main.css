@@ -1,5 +1,61 @@
+/* ===========================================
+   Core Theme Files
+=========================================== */
 @import url("themes.css");
+/* Color themes and variables */
 @import url("base.css");
-@import url("layout.css");
-@import url("components.css");
-@import url("pages.css");
+/* Reset, typography, base styles */
+
+/* ===========================================
+   Header and Navigation
+=========================================== */
+@import url("promo-banner.css");
+/* Top promo banner */
+@import url("site-brand.css");
+/* Logo and branding */
+@import url("user-info.css");
+/* User info and cart */
+@import url("header.css");
+/* Header layout */
+@import url("navigation.css");
+/* Navigation menu */
+
+/* ===========================================
+   Main Sections
+=========================================== */
+@import url("hero.css");
+/* Hero section */
+@import url("mini-player.css");
+/* Sound player section */
+@import url("products.css");
+/* Products section */
+@import url("portfolio.css");
+/* Portfolio section */
+@import url("social-connections.css");
+/* Social connections */
+@import url("about.css");
+/* About section */
+@import url("contact.css");
+/* Contact section */
+@import url("social-connect.css");
+/* Social connect section */
+
+/* ===========================================
+   Footer
+=========================================== */
+@import url("footer.css");
+/* Footer styles */
+
+/* ===========================================
+   Other Components
+=========================================== */
+@import url("dev-menu.css");
+/* Dev mode menu */
+@import url("modal.css");
+/* Product modal */
+
+/* ===========================================
+   Responsive Adjustments
+=========================================== */
+@import url("responsive.css");
+/* Media queries for mobile/tablet */

@@ -1,0 +1,125 @@
+/* ===========================================
+   Modal Overlay
+=========================================== */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    /* Softer dark background */
+    backdrop-filter: blur(5px);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+}
+
+/* Show modal when active */
+.modal-overlay.active {
+    display: flex;
+}
+
+/* ===========================================
+   Modal Box Content
+=========================================== */
+.modal-content {
+    background: var(--color-surface);
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 90%;
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ===========================================
+   Modal Product Image
+=========================================== */
+.modal-image {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 0.75rem;
+    margin-bottom: 1rem;
+    background-color: var(--color-bg-image);
+}
+
+/* ===========================================
+   Modal Text Content
+=========================================== */
+
+/* Product Name */
+#modal-product-name {
+    font-family: var(--font-display);
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    color: var(--color-text);
+}
+
+/* Product Price */
+#modal-product-price {
+    font-size: 1.2rem;
+    color: var(--color-primary);
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+/* Product Description */
+#modal-product-description {
+    font-size: 1rem;
+    color: var(--color-muted-text);
+    margin-bottom: 1.5rem;
+}
+
+/* ===========================================
+   Modal Close Button
+=========================================== */
+.modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: var(--color-primary-light);
+    border: none;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+}
+
+.modal-close:hover {
+    background-color: var(--color-primary-dark);
+}
+
+/* ===========================================
+   Modal Add to Cart Button
+=========================================== */
+#modal-add-to-cart {
+    margin-top: 1.5rem;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--color-primary);
+    color: white;
+    font-weight: 600;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#modal-add-to-cart:hover {
+    background-color: var(--color-primary-dark);
+    transform: scale(1.05);
+}

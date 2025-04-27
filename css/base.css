@@ -1,173 +1,117 @@
-html {
-    scroll-behavior: smooth;
-}
-
-section[id] {
-    scroll-margin-top: 120px;
-    /* offset for sticky nav */
-}
-
+/* ===========================================
+   Reset
+=========================================== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body {
-    font-family: 'Open Sans', sans-serif;
-    color: var(--text, #333);
-    line-height: 1.6;
-    background-color: var(--bg, #fff7f9);
-}
-
+/* ===========================================
+   Root Variables (Fonts)
+=========================================== */
 :root {
-    --pink-light: #fff0f5;
-    --pink-main: #d64588;
-    --cream: #fbeec1;
-    --gold-soft: #e6c17b;
-    --brown: #a0522d;
-    --text: #333;
-    --bg: #fff7f9;
-    --rich-chocolate-brown: #4c1f1a;
-    --rich-pink-main: #9c3263;
-    --dark-chocolate: #5A3330;
-    --pink-soft: #EFB5D0;
+    --font-primary: 'Poppins', sans-serif;
+    --font-secondary: 'Playfair Display', serif;
+    --font-display: 'Abril Fatface', cursive;
 }
 
-/* ----------------------------------------
-   Typography: Headings
----------------------------------------- */
+/* ===========================================
+   Global Styles
+=========================================== */
+body {
+    font-family: var(--font-primary);
+    background-color: var(--color-bg);
+    color: var(--color-text);
+}
 
+/* ===========================================
+   Headings
+=========================================== */
 h1,
-.heading-1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-}
-
 h2,
-.heading-2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 2rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
-}
-
-h3,
-.heading-3 {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin-bottom: 0.8rem;
-}
-
-h4,
-.heading-4 {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 1.2rem;
-    font-weight: 600;
-    margin-bottom: 0.5rem;
-}
-
-h5,
-.heading-5,
-h6,
-.heading-6 {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 1rem;
-    font-weight: 600;
-    margin-bottom: 0.5rem;
-}
-
-/* ----------------------------------------
-   Heading Colors: Primary & Secondary
----------------------------------------- */
-
-.heading-primary {
-    color: var(--pink-main);
-}
-
-.heading-secondary {
-    color: var(--rich-chocolate-brown);
-}
-
-/* Base text classes */
-.text-base {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 1rem;
-    line-height: 1.6;
-    color: var(--text);
-}
-
-.text-small {
-    font-size: 0.875rem;
-}
-
-.text-large {
-    font-size: 1.125rem;
-}
-
-/* Emphasis variations */
-.text-bold {
+h3 {
+    font-family: var(--font-secondary);
     font-weight: 700;
+    line-height: 1.2;
 }
 
-.text-semibold {
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+/* ===========================================
+   Font Utility Classes
+=========================================== */
+.font-primary {
+    font-family: var(--font-primary);
+}
+
+.font-secondary {
+    font-family: var(--font-secondary);
+}
+
+.font-display {
+    font-family: var(--font-display);
+}
+
+/* ===========================================
+   Link Styles (Base + Variants)
+=========================================== */
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Primary Link */
+a.link-primary {
+    color: var(--color-primary);
     font-weight: 600;
 }
 
-.text-light {
-    font-weight: 400;
+a.link-primary:hover {
+    color: var(--color-primary-dark);
+    text-decoration: none;
 }
 
-/* ----------------------------------------
-   Text Color Variants
----------------------------------------- */
-
-.text-base {
-    color: var(--rich-chocolate-brown);
+/* Secondary Link */
+a.link-secondary {
+    color: var(--color-text);
+    font-weight: 500;
+    transition: color 0.2s ease;
 }
 
-.text-primary {
-    color: var(--pink-main);
+a.link-secondary:hover {
+    color: var(--color-primary);
+    text-decoration: none;
 }
 
-.text-secondary {
-    color: var(--brown);
+/* Muted Link (Footer etc.) */
+a.link-muted {
+    color: var(--color-muted-text);
+    transition: color 0.2s ease;
 }
 
-.text-accent {
-    color: var(--gold-soft);
+a.link-muted:hover {
+    color: var(--color-primary);
+    text-decoration: none;
 }
 
-.text-muted {
-    color: #777;
-}
-
-/* ----------------------------------------
-   Typography: Headings & Text
----------------------------------------- */
-
-/* Primary Titles */
-.title-primary {
-    font-family: 'Abril Fatface', cursive;
-    font-size: 2rem;
-    color: var(--pink-main);
-    margin-bottom: 1rem;
-}
-
-/* Secondary Titles */
-.title-secondary {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.5rem;
-    color: var(--rich-chocolate-brown);
-    margin-bottom: 0.5rem;
-}
-
-/* Body text */
-.text-base {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 1rem;
-    line-height: 1.6;
+/* ===========================================
+   Accessibility Helpers
+=========================================== */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
 }

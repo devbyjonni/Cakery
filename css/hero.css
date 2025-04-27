@@ -1,0 +1,181 @@
+/* ===========================================
+   Hero Outer Wrapper
+=========================================== */
+
+.hero-outer-wrapper {
+    position: relative;
+    background-color: var(--color-surface);
+    padding: 2rem 2rem 1rem;
+    overflow: hidden;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ===========================================
+   Hero Inner Wrapper
+=========================================== */
+
+.hero-inner-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+    background-color: var(--color-bg);
+    border-radius: 0.75rem;
+}
+
+/* ===========================================
+   Hero Inner
+=========================================== */
+
+.hero-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 1rem;
+    padding-bottom: 2rem;
+    background-color: var(--color-bg-alt);
+    border-radius: 0.75rem;
+}
+
+/* ===========================================
+   Hero Image Wrapper
+=========================================== */
+
+.hero-image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 0.75rem;
+}
+
+/* ===========================================
+   Hero Images and Slider
+=========================================== */
+
+.hero-image,
+.hero-slide {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0.75rem;
+}
+
+/* Fade Effect */
+.hero-image {
+    transition: opacity 0.5s ease-in-out;
+    opacity: 1;
+}
+
+.fade-out {
+    opacity: 0;
+}
+
+/* Hero Slider Container */
+.hero-slider {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    border-radius: 0.75rem;
+    background-color: var(--color-bg-image);
+}
+
+/* Hero Slides */
+.hero-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.hero-slide.active {
+    opacity: 1;
+    z-index: 1;
+}
+
+/* ===========================================
+   Hero Content (Always Visible)
+=========================================== */
+
+.hero-content {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    right: 2rem;
+    bottom: 5rem;
+    text-align: center;
+    background-color: var(--content-bg);
+    backdrop-filter: blur(5px);
+    border-radius: 0.75rem;
+    z-index: 10;
+    color: var(--color-text);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ===========================================
+   Hero Text (Title and Subtitle)
+=========================================== */
+
+.hero-title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    color: var(--color-muted-text);
+}
+
+/* ===========================================
+   Hero Button
+=========================================== */
+
+.hero-button {
+    display: inline-block;
+    background-color: var(--color-primary);
+    color: white;
+    text-decoration: none;
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    border-radius: 0.5rem;
+    transition: background-color 0.2s ease;
+}
+
+.hero-button:hover {
+    background-color: var(--color-primary-dark);
+}
+
+/* ===========================================
+   Hero Pagination (Dots)
+=========================================== */
+
+.hero-pagination {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.hero-dot {
+    width: 10px;
+    height: 10px;
+    background-color: var(--color-muted-text);
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.hero-dot.active {
+    background-color: var(--color-primary);
+}

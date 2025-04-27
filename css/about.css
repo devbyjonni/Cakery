@@ -1,0 +1,131 @@
+/* ===========================================
+   About Section
+=========================================== */
+
+/* Outer Wrapper */
+.about-outer-wrapper {
+    background-color: var(--color-surface);
+    padding: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+/* Inner Wrapper */
+.about-inner-wrapper {
+    background-color: var(--color-bg);
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+    padding-bottom: 2rem;
+    border-radius: 0.75rem;
+}
+
+/* About Inner */
+.about-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* Single About Item */
+.about-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1rem;
+    background-color: var(--color-bg-alt);
+    border-radius: 0.5rem;
+}
+
+/* Flip layout for alternate items */
+.about-item.reverse {
+    flex-direction: row-reverse;
+}
+
+/* About Image */
+.about-image-wrapper {
+    flex: 1;
+    max-width: 500px;
+}
+
+.about-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 0.75rem;
+    /* Soft corners */
+    object-fit: cover;
+    background-color: var(--content-bg);
+}
+
+/* About Text */
+.about-text {
+    flex: 1;
+}
+
+.about-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.about-header .about-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--color-text);
+}
+
+.about-header .about-subtitle {
+    font-size: 1.1rem;
+    color: var(--color-muted-text);
+}
+
+.about-button-wrapper {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+/* About Titles */
+.about-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--color-text);
+}
+
+.about-subtitle {
+    font-size: 1.1rem;
+    color: var(--color-muted-text);
+}
+
+/* About Button */
+.about-button {
+    display: inline-block;
+    margin-top: 1.5rem;
+    background-color: var(--color-primary);
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+}
+
+.about-button:hover {
+    background-color: var(--color-primary-dark);
+}
+
+/* ===========================================
+   About Responsive
+=========================================== */
+@media (max-width: 768px) {
+
+    .about-item,
+    .about-item.reverse {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-image-wrapper {
+        max-width: 100%;
+    }
+}

@@ -1,41 +1,109 @@
-/* ----------------------------------------
-   Color Variables & Theme Settings
----------------------------------------- */
-
+/* ===========================================
+   Light Theme (Default)
+=========================================== */
 :root {
-    --pink-light: #fff0f5;
-    --pink-main: #d64588;
-    --cream: #fbeec1;
-    --gold-soft: #e6c17b;
-    --brown: #a0522d;
-    --text: #333;
-    --bg: #fff7f9;
-    --rich-chocolate-brown: #4c1f1a;
-    --rich-pink-main: #9c3263;
-    --dark-chocolate: #5A3330;
-    --pink-soft: #EFB5D0;
+    /* Backgrounds */
+    --color-bg: #fff7f9;
+    /* Soft pink */
+    --color-bg-alt: #fff0f5;
+    /* Light pink */
+    --color-bg-image: #ffffff;
+    --content-bg: rgba(255, 247, 249, 0.8);
 
-    /* Typography */
-    --font-body: 'Open Sans', sans-serif;
-    --font-heading: 'Playfair Display', serif;
+    /* Surfaces */
+    --color-surface: #ffffff;
+
+    /* Text Colors */
+    --color-text: #333;
+    /* Main text color */
+    --color-muted-text: #a0522d;
+    /* Brown muted text */
+
+    /* Borders */
+    --color-border: #fbeec1;
+    /* Cream border */
+
+    /* Primary Colors */
+    --color-primary: #d64588;
+    /* Main Cakery pink */
+    --color-primary-light: #efb5d0;
+    /* Soft pink */
+    --color-primary-dark: #9c3263;
+    /* Rich pink */
 }
 
-/* ----------------------------------------
-   Dark Mode (Optional Future Add)
----------------------------------------- */
+/* ===========================================
+   Manual Dark Mode (using body.dark-mode)
+=========================================== */
+body.dark-mode {
+    /* Backgrounds */
+    --color-bg: #4c1f1a;
+    /* Rich chocolate brown */
+    --color-bg-alt: #5a3330;
+    /* Dark chocolate */
+    --color-bg-image: #2b1b18;
+    /* Very dark brown */
+    --content-bg: rgba(44, 31, 26, 0.8);
 
-/* 
+    /* Surfaces */
+    --color-surface: #5a3330;
+
+    /* Text Colors */
+    --color-text: #fbeec1;
+    /* Light cream text */
+    --color-muted-text: #e6c17b;
+    /* Soft gold muted text */
+
+    /* Borders */
+    --color-border: #7a5e58;
+    /* Soft muted brown border */
+
+    /* Primary Colors */
+    --color-primary: #efb5d0;
+    /* Light pink for highlights */
+    --color-primary-light: #fbd7e7;
+    /* Even softer light pink */
+    --color-primary-dark: #d64588;
+    /* Cakery main pink */
+}
+
+/* ===========================================
+   System Dark Mode (optional fallback)
+=========================================== */
 @media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #2e2e2e;
-    --text: #f3f3f3;
-    --pink-main: #ff69b4;
-    --brown: #deb887;
-  }
+    :root:not(.dark-mode) {
+        /* Backgrounds */
+        --color-bg: #4c1f1a;
+        --color-bg-alt: #5a3330;
+        --color-bg-image: #2b1b18;
+        --content-bg: rgba(44, 31, 26, 0.8);
 
-  body {
-    background-color: var(--bg);
-    color: var(--text);
-  }
+        /* Surfaces */
+        --color-surface: #5a3330;
+
+        /* Text Colors */
+        --color-text: #fbeec1;
+        --color-muted-text: #e6c17b;
+
+        /* Borders */
+        --color-border: #7a5e58;
+
+        /* Primary Colors */
+        --color-primary: #efb5d0;
+        --color-primary-light: #fbd7e7;
+        --color-primary-dark: #d64588;
+    }
 }
-*/
+
+/* ===========================================
+   System Dark Mode (Logo Visibility Helpers)
+=========================================== */
+@media (prefers-color-scheme: dark) {
+    body:not(.dark-mode) .light-logo {
+        display: none;
+    }
+
+    body:not(.dark-mode) .dark-logo {
+        display: block;
+    }
+}
