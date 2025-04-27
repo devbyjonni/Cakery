@@ -18,13 +18,17 @@
     font-size: 1rem;
 }
 
+.user-greeting {
+    color: var(--color-muted-text);
+}
+
 /* ===========================================
    Cart Icon
 =========================================== */
 .cart {
     position: relative;
     text-decoration: none;
-    color: var(--color-text);
+    color: var(--color-muted-text);
     font-size: 1.2rem;
 }
 
@@ -35,8 +39,9 @@
     background-color: var(--color-primary);
     color: white;
     border-radius: 999px;
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     padding: 0.2rem 0.5rem;
+    font-weight: 600;
 }
 
 /* ===========================================
@@ -67,7 +72,7 @@
 }
 
 .cart-total {
-    font-size: 0.95rem;
+    font-size: 1rem;
     margin-top: 0.5rem;
     color: var(--color-text);
 }

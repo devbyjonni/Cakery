@@ -11,9 +11,9 @@
    Root Variables (Fonts)
 =========================================== */
 :root {
-    --font-primary: 'Poppins', sans-serif;
-    --font-secondary: 'Playfair Display', serif;
-    --font-display: 'Abril Fatface', cursive;
+    --font-primary: 'Playfair Display', serif;
+    --font-secondary: 'Open Sans', sans-serif;
+    --font-display: 'Playfair Display', serif;
 }
 
 /* ===========================================
@@ -22,27 +22,37 @@
 body {
     font-family: var(--font-primary);
     background-color: var(--color-bg);
-    color: var(--color-text);
+    color: var(--color-primary);
+}
+
+body p {
+    font-family: var(--font-secondary);
+    color: var(--color-muted-text);
+    font-size: 1.2rem;
+    /* color: #777; */
+    /* light gray */
 }
 
 /* ===========================================
    Headings
 =========================================== */
 h1,
-h2,
-h3 {
-    font-family: var(--font-secondary);
+h2 {
+    font-family: var(--font-primary);
     font-weight: 700;
     line-height: 1.2;
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
 }
 
-h1 {
+h3 {
+    font-family: var(--font-secondary);
+    line-height: 1.2;
     font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: var(--color-text);
 }
 
-h2 {
-    font-size: 1.5rem;
-}
 
 /* ===========================================
    Font Utility Classes
@@ -97,9 +107,31 @@ a.link-muted {
 }
 
 a.link-muted:hover {
-    color: var(--color-primary);
+    color: var(--color-primary-dark);
     text-decoration: none;
 }
+
+/* ===========================================
+   Social Links
+=========================================== */
+.social-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    padding: 0;
+    margin: 0;
+}
+
+.social-links a {
+    font-size: 1.2rem;
+    color: var(--color-primary);
+    transition: color 0.2s ease;
+}
+
+.social-links a:hover {
+    color: var(--color-primary-dark);
+}
+
 
 /* ===========================================
    Accessibility Helpers
@@ -114,4 +146,44 @@ a.link-muted:hover {
     clip: rect(0, 0, 0, 0);
     white-space: nowrap;
     border: 0;
+}
+
+/* ===========================================
+   Button
+=========================================== */
+.btn {
+    font-family: var(--font-secondary);
+    padding: 0.5rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 2rem;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 6px rgba(214, 69, 136, 0.3);
+}
+
+/* ===========================================
+   Primary Button
+=========================================== */
+.button-primary {
+    background-color: var(--color-primary);
+}
+
+.button-primary:hover {
+    background-color: var(--color-primary-dark);
+}
+
+/* ===========================================
+   Primary Button
+=========================================== */
+.button-secondary {
+    background-color: var(--gold-soft);
+}
+
+.button-secondary:hover {
+    background-color: var(--color-primary-dark);
 }

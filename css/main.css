@@ -25,20 +25,14 @@
 =========================================== */
 @import url("hero.css");
 /* Hero section */
-@import url("mini-player.css");
-/* Sound player section */
 @import url("products.css");
 /* Products section */
-@import url("portfolio.css");
-/* Portfolio section */
 @import url("social-connections.css");
 /* Social connections */
 @import url("about.css");
 /* About section */
 @import url("contact.css");
 /* Contact section */
-@import url("social-connect.css");
-/* Social connect section */
 
 /* ===========================================
    Footer

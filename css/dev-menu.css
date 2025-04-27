@@ -26,11 +26,11 @@
     position: fixed;
     bottom: 4rem;
     right: 1rem;
-    background-color: #1e1e1e;
+    background-color: var(--color-primary-dark);
     color: #d4d4d4;
-    border: 1px solid #333;
+    border: 1px solid var(--color-primary-light);
     border-radius: 0.5rem;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
     padding: 1rem;
     width: 200px;
     display: none;
@@ -44,9 +44,9 @@
     font-size: 1rem;
     font-weight: 700;
     margin-bottom: 0.75rem;
-    border-bottom: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-primary-light);
     padding-bottom: 0.5rem;
-    color: #4fc1ff;
+    color: #fdfdfd;
 }
 
 /* Dev Menu List */
@@ -64,7 +64,7 @@
 /* Dev Menu Links */
 .dev-menu a {
     display: block;
-    color: #9cdcfe;
+    color: #ffffff;
     font-size: 0.9rem;
     text-decoration: none;
     transition: color 0.2s ease;
@@ -72,6 +72,7 @@
 
 /* Dev Menu Hover */
 .dev-menu a:hover {
-    color: #4fc1ff;
+    color: var(--color-border);
     text-decoration: underline;
+    color: var(--color-primary-light);
 }

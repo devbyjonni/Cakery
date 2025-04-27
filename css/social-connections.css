@@ -14,7 +14,6 @@
 }
 
 .social-connect-title {
-    font-size: 2.5rem;
     margin-bottom: 2rem;
     color: var(--color-text);
 }
@@ -29,12 +28,14 @@
 }
 
 .social-connect-inner-wrapper .social-links a {
-    font-size: 2.5rem;
-    color: var(--color-muted-text);
-    transition: color 0.3s ease, transform 0.3s ease;
+    color: var(--color-primary);
 }
 
 .social-connect-inner-wrapper .social-links a:hover {
-    color: var(--color-primary);
-    transform: scale(1.1);
+    color: var(--color-primary-dark);
+}
+
+.social-connect-inner-wrapper .social-links i {
+    font-size: 2rem;
+    margin-top: 2rem;
 }

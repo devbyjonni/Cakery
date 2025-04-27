@@ -1,31 +1,27 @@
-/* ===========================================
-   Products Outer Wrapper
-=========================================== */
+/* ====================
+   Products Section
+   ==================== */
+
+/* Outer wrapper centers content and applies background */
 .products-outer-wrapper {
-    background-color: var(--color-surface);
+    background: var(--color-bg);
     padding: 2rem;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
     display: flex;
     justify-content: center;
 }
 
-/* ===========================================
-   Products Inner Wrapper
-=========================================== */
+/* Inner wrapper constrains width and adds styling */
 .products-inner-wrapper {
-    background-color: var(--color-bg);
+    background: var(--color-bg-alt);
     width: 100%;
     max-width: 1200px;
-    padding: 1rem;
-    padding-bottom: 2rem;
+    padding: 2rem;
+    /* padding-top: 1rem; */
     border-radius: 0.75rem;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 }
 
-/* ===========================================
-   Products Inner
-=========================================== */
+/* Layout for header and grid */
 .products-inner {
     display: flex;
     flex-direction: column;
@@ -33,27 +29,10 @@
     text-align: center;
 }
 
-/* ===========================================
-   Products Header
-=========================================== */
 .products-header {
     margin-bottom: 2rem;
 }
 
-.products-title {
-    font-size: 2rem;
-    color: var(--color-text);
-    margin-bottom: 0.5rem;
-}
-
-.products-subtitle {
-    font-size: 1.1rem;
-    color: var(--color-muted-text);
-}
-
-/* ===========================================
-   Products Grid
-=========================================== */
 .products-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -61,14 +40,15 @@
     width: 100%;
 }
 
-/* ===========================================
-   Single Product Card
-=========================================== */
+/* ====================
+   Product Card
+   ==================== */
+
 .product-card {
-    background-color: var(--color-bg-alt);
-    border-radius: 0.5rem;
+    background: var(--color-bg-image);
+    border-radius: 0.8rem;
     padding: 1rem;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
     transition: transform 0.2s ease;
 }
 
@@ -80,49 +60,34 @@
     width: 100%;
     border-radius: 0.5rem;
     margin-bottom: 1rem;
-    background-color: var(--color-bg-image);
+    background: var(--color-bg-image);
 }
 
 .product-name {
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
-    color: var(--color-text);
+    font-size: 1.1rem;
+    margin-bottom: 0.7rem;
 }
 
 .product-price {
-    font-size: 1rem;
-    color: var(--color-primary);
-    font-weight: 600;
+    font-size: 1.2rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
 }
 
 .product-description {
-    font-size: 0.85rem;
-    color: var(--color-muted-text);
+    font-size: 1rem;
     margin-top: 0.5rem;
 }
 
-/* ===========================================
-   Products Button Wrapper
-=========================================== */
+.card-add-to-cart {
+    margin-bottom: 1rem;
+}
+
+/* ====================
+   Explore Button
+   ==================== */
+
 .products-button-wrapper {
-    margin-top: 2rem;
+    margin-top: 3rem;
     text-align: center;
-}
-
-/* ===========================================
-   Primary Button
-=========================================== */
-.button-primary {
-    display: inline-block;
-    background-color: var(--color-primary);
-    color: white;
-    text-decoration: none;
-    padding: 0.75rem 1.5rem;
-    font-weight: 600;
-    border-radius: 0.5rem;
-    transition: background-color 0.2s ease;
-}
-
-.button-primary:hover {
-    background-color: var(--color-primary-dark);
 }

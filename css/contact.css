@@ -10,8 +10,17 @@
 
 /* Inner Wrapper */
 .contact-inner-wrapper {
+    background-color: var(--color-bg-alt);
     max-width: 1200px;
     margin: 0 auto;
+    padding: 2rem;
+    padding-bottom: 2rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.contact-header {
+    text-align: center;
 }
 
 /* Inner Flex Layout */
@@ -31,9 +40,24 @@
     gap: 2rem;
 }
 
+.contact-grid .contact-title {
+    margin-bottom: 1rem;
+    color: var(--color-text);
+}
+
+.contact-grid p {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    color: var(--color-text);
+}
+
+.contact-details p {
+    color: var(--color-primary);
+}
+
 /* Map Wrapper */
 .contact-map-wrapper {
-    background-color: var(--color-bg-alt);
+    background-color: var(--color-bg-image);
     padding: 2rem;
     border-radius: 0.75rem;
 }
@@ -61,13 +85,10 @@
 }
 
 .contact-title {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 .contact-subtitle {
-    font-size: 1.1rem;
-    color: var(--color-muted-text);
     margin-bottom: 2rem;
 }
 
@@ -111,13 +132,13 @@
 .contact-info-wrapper {
     flex: 1;
     min-width: 300px;
-    background-color: var(--color-bg-alt);
+    background-color: var(--color-bg-image);
     padding: 2rem;
     border-radius: 0.75rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 }
 
 .contact-info-title {
-    font-size: 2.5rem;
     margin-bottom: 1rem;
 }
 
@@ -126,12 +147,7 @@
 }
 
 .contact-info-wrapper a {
-    color: var(--color-muted-text);
     text-decoration: none;
-}
-
-.contact-info-wrapper a:hover {
-    color: var(--color-primary);
 }
 
 /* ===========================================
@@ -151,16 +167,7 @@
 
 .social-links i {
     margin-top: 0.3rem;
-    font-size: 1.5rem;
-}
-
-.social-links a {
-    color: var(--color-muted-text);
-    transition: color 0.3s ease;
-}
-
-.social-links a:hover {
-    color: var(--color-primary);
+    font-size: 1.3rem;
 }
 
 /* ===========================================
@@ -175,14 +182,11 @@
 }
 
 .newsletter-title {
-    font-size: 1.5rem;
     margin-bottom: 0.5rem;
 }
 
 .newsletter-subtitle {
-    font-size: 1rem;
     margin-bottom: 1.5rem;
-    color: var(--color-muted-text);
 }
 
 .newsletter-form {
@@ -212,11 +216,10 @@
     border-radius: 0.5rem;
     transition: background-color 0.3s ease;
     cursor: pointer;
+    font-size: 1rem;
 }
 
-.newsletter-button:hover {
-    background-color: var(--color-primary-dark);
-}
+
 
 /* ===========================================
    Responsive Contact Section

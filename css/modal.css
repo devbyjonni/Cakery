@@ -1,24 +1,22 @@
 /* ===========================================
-   Modal Overlay
+   Modal Overlay & Visibility
 =========================================== */
 .modal-overlay {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    inset: 0;
+    /* shorthand for top/left/right/bottom */
     background: rgba(0, 0, 0, 0.6);
-    /* Softer dark background */
     backdrop-filter: blur(5px);
     display: none;
+    /* hidden by default */
     align-items: center;
     justify-content: center;
     z-index: 10000;
 }
 
-/* Show modal when active */
 .modal-overlay.active {
     display: flex;
+    /* shown when .active */
 }
 
 /* ===========================================
@@ -29,32 +27,49 @@
     padding: 2rem;
     border-radius: 1rem;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-    max-width: 400px;
+    max-width: 800px;
+    /* wider to accommodate 60/40 split */
     width: 90%;
-    text-align: center;
     position: relative;
+
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    /* side-by-side layout */
+    flex-direction: row;
+    align-items: flex-start;
+    /* align items at top */
+    gap: 2rem;
+    /* space between columns */
 }
 
 /* ===========================================
-   Modal Product Image
+   Modal Product Image (40%)
 =========================================== */
 .modal-image {
-    max-width: 100%;
+    flex: 0 0 40%;
+    /* fixed 40% width */
+    max-width: 40%;
     height: auto;
     object-fit: contain;
     border-radius: 0.75rem;
-    margin-bottom: 1rem;
     background-color: var(--color-bg-image);
 }
 
 /* ===========================================
-   Modal Text Content
+   Modal Details (40%)
 =========================================== */
+.modal-details {
+    flex: 1;
+    /* fill remaining space (40%) */
+    text-align: left;
+    /* left-align text */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 
-/* Product Name */
+/* ===========================================
+   Text Elements
+=========================================== */
 #modal-product-name {
     font-family: var(--font-display);
     font-size: 1.8rem;
@@ -62,18 +77,15 @@
     color: var(--color-text);
 }
 
-/* Product Price */
 #modal-product-price {
     font-size: 1.2rem;
-    color: var(--color-primary);
     font-weight: 600;
     margin-bottom: 1rem;
 }
 
-/* Product Description */
 #modal-product-description {
     font-size: 1rem;
-    color: var(--color-muted-text);
+    color: var(--color-text);
     margin-bottom: 1.5rem;
 }
 
@@ -86,12 +98,11 @@
     right: 1rem;
     width: 2.5rem;
     height: 2.5rem;
-    background-color: var(--color-primary-light);
+    background-color: var(--color-primary);
     border: none;
     border-radius: 50%;
     font-size: 1.5rem;
-    font-weight: bold;
-    color: white;
+    color: #fff;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -104,22 +115,32 @@
 }
 
 /* ===========================================
-   Modal Add to Cart Button
+   Modal “Add to Cart” Button
 =========================================== */
 #modal-add-to-cart {
-    margin-top: 1.5rem;
-    padding: 0.75rem 1.5rem;
-    background-color: var(--color-primary);
-    color: white;
-    font-weight: 600;
-    border: none;
-    border-radius: 0.5rem;
+    margin-top: auto;
     cursor: pointer;
-    font-size: 1rem;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 180px;
 }
 
-#modal-add-to-cart:hover {
-    background-color: var(--color-primary-dark);
-    transform: scale(1.05);
+/* ===========================================
+   Responsive: Stack on Narrow Screens
+=========================================== */
+@media (max-width: 600px) {
+    .modal-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .modal-image,
+    .modal-details {
+        flex: none;
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .modal-details {
+        margin-top: 1rem;
+        align-items: center;
+    }
 }

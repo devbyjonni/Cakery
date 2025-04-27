@@ -20,13 +20,15 @@
 =========================================== */
 .promo-banner-link {
     display: block;
-    color: white;
+    color: var(--color-bg);
     font-size: 1rem;
     text-decoration: none;
 }
 
 .promo-banner-link p {
     padding: 0rem 0;
+    color: var(--color-bg);
+    font-size: 1rem;
 }
 
 /* Promo Banner Hover Effect */

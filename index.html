@@ -4,15 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Cakery</title>
-
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@400;700&family=Work+Sans:wght@400;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap"
       rel="stylesheet"
     />
-
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
     <!-- Font Awesome (Icons) -->
     <link
       rel="stylesheet"
@@ -20,7 +22,6 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-
     <!-- Stylesheets -->
     <link rel="stylesheet" href="css/main.css" />
   </head>
@@ -30,9 +31,11 @@
     <header class="header-outer-wrapper">
       <!-- Promo Banner -->
       <div class="promo-banner-outer-wrapper">
-        <a href="#products" class="promo-banner-link font-secondary">
+        <a href="#shop" class="promo-banner-link font-secondary">
           <div class="promo-banner-inner-wrapper font-secondary">
-            <p><strong>50% OFF</strong> for all Cupcakes — This Week Only!</p>
+            <p>
+              <strong>🎉 50% OFF</strong> for all Cupcakes — This Week Only!
+            </p>
           </div>
         </a>
       </div>
@@ -44,14 +47,9 @@
             <h1 class="visually-hidden">Cakery</h1>
             <a href="index.html" class="logo-link">
               <img
-                src="images/logo.png"
+                src="assets/images/logo.png"
                 alt="Cakery Logo"
                 class="logo-image light-logo"
-              />
-              <img
-                src="images/logo-dark.png"
-                alt="Cakery Logo Dark"
-                class="logo-image dark-logo"
               />
             </a>
           </div>
@@ -65,18 +63,13 @@
             >
               <ul class="nav-links">
                 <li>
-                  <a href="#hero" class="link-secondary active font-secondary"
+                  <a href="#home" class="link-secondary active font-secondary"
                     >Home</a
                   >
                 </li>
                 <li>
-                  <a href="#products" class="link-secondary font-secondary"
-                    >Products</a
-                  >
-                </li>
-                <li>
-                  <a href="#portfolio" class="link-secondary font-secondary"
-                    >Portfolio</a
+                  <a href="shop.html" class="link-secondary font-secondary"
+                    >Shop</a
                   >
                 </li>
                 <li>
@@ -94,7 +87,7 @@
           </div>
 
           <!-- User Actions -->
-          <div class="user-actions font-primary">
+          <div class="user-actions font-secondary">
             <div class="user-info">
               <span class="user-greeting font-secondary">Hi, Guest</span>
 
@@ -116,7 +109,12 @@
             </div>
 
             <!-- Mobile Menu Button -->
-            <button class="menu-toggle" aria-label="Toggle navigation">
+            <button
+              class="menu-toggle"
+              aria-label="Toggle navigation"
+              aria-expanded="false"
+              aria-controls="main-nav"
+            >
               <span class="bar"></span>
               <span class="bar"></span>
               <span class="bar"></span>
@@ -129,198 +127,179 @@
     <!-- =================== MAIN CONTENT =================== -->
     <main class="main-outer-wrapper font-primary">
       <!-- Hero Section -->
-      <section id="hero" class="hero-outer-wrapper">
+      <section id="home" class="hero-outer-wrapper">
         <div class="hero-inner-wrapper">
           <div class="hero-inner">
             <!-- Image Slider -->
             <div class="hero-slider">
-              <img src="images/hero1.png" alt="Hero 1" class="hero-slide" />
-              <img src="images/hero2.png" alt="Hero 2" class="hero-slide" />
-              <img src="images/hero3.png" alt="Hero 3" class="hero-slide" />
-              <img src="images/hero4.png" alt="Hero 4" class="hero-slide" />
-            </div>
-
-            <div class="hero-pagination"></div>
-
-            <!-- Hero Content -->
-            <div class="hero-content">
-              <h1 class="hero-title font-display">Delight in Every Bite</h1>
-              <p class="hero-subtitle font-secondary">
-                Handcrafted cupcakes made with love and passion.
-              </p>
-              <a href="#products" class="hero-button">Order Now</a>
+              <img
+                src="assets/images/hero1.png"
+                alt="Hero 1"
+                class="hero-slide"
+              />
+              <img
+                src="assets/images/hero1.png"
+                alt="Hero 2"
+                class="hero-slide"
+              />
             </div>
           </div>
+        </div>
+        <!-- Hero Content -->
+        <div class="hero-content">
+          <div class="site-brand">
+            <h1 class="visually-hidden">Cakery</h1>
+            <a href="index.html" class="logo-link">
+              <img
+                src="assets/images/logo.png"
+                alt="Cakery Logo"
+                class="logo-image light-logo"
+              />
+            </a>
+          </div>
+          <h1 class="hero-title font-display">Delight in Every Bite</h1>
+          <p class="hero-subtitle font-secondary">
+            Handcrafted cupcakes made with love and passion
+          </p>
+          <div class="hero-pagination visually-hidden"></div>
         </div>
       </section>
 
       <!-- Products Section -->
-      <section id="products" class="products-outer-wrapper">
+      <section id="shop" class="products-outer-wrapper">
+        <div class="logo-stars">★★★★★</div>
         <div class="products-inner-wrapper">
           <div class="products-inner">
-            <div class="products-header">
-              <h2 class="products-title font-display">Our Cupcakes</h2>
-              <p class="products-subtitle font-secondary">
-                Freshly baked cupcakes to sweeten your day.
+            <div class="products-header visually-hidden">
+              <h2 class="products-title">Our Cupcakes</h2>
+              <p class="products-subtitle">
+                Freshly baked cupcakes to sweeten your day
               </p>
             </div>
-
             <!-- Product Grid -->
             <div class="products-grid">
-              <!-- Single Product -->
               <div class="product-card">
                 <img
-                  src="images/product1.png"
+                  src="assets/images/products/single-cake-5.jpg"
                   alt="Chocolate Fudge Cupcake"
                   class="product-image"
                 />
-                <h3 class="product-name font-secondary">
-                  Chocolate Fudge Cupcake
-                </h3>
-                <p class="product-price font-primary">$4.99</p>
-                <p class="product-description font-secondary">
+                <h3 class="product-name">Chocolate Cupcake</h3>
+                <p class="product-price">$4.99</p>
+                <p class="product-description visually-hidden">
                   Rich, moist chocolate cupcake topped with smooth fudge
-                  frosting.
+                  frosting
                 </p>
+                <button class="card-add-to-cart btn button-primary">
+                  Add to Cart
+                </button>
               </div>
-
               <div class="product-card">
                 <img
-                  src="images/product2.png"
+                  src="assets/images/products/single-cake-2.jpg"
                   alt="Strawberry Delight Cupcake"
                   class="product-image"
                 />
-                <h3 class="product-name font-secondary">
-                  Strawberry Delight Cupcake
-                </h3>
-                <p class="product-price font-primary">$5.49</p>
-                <p class="product-description font-secondary">
+                <h3 class="product-name">Strawberry Cupcake</h3>
+                <p class="product-price">$5.49</p>
+                <p class="product-description visually-hidden">
                   Fluffy vanilla cake filled with fresh strawberry compote and
-                  cream.
+                  cream
                 </p>
+                <button class="card-add-to-cart btn button-primary">
+                  Add to Cart
+                </button>
               </div>
-
               <div class="product-card">
                 <img
-                  src="images/product3.png"
+                  src="assets/images/products/single-cake-6.jpg"
                   alt="Classic Vanilla Cupcake"
                   class="product-image"
                 />
-                <h3 class="product-name font-secondary">
-                  Classic Vanilla Cupcake
-                </h3>
-                <p class="product-price font-primary">$3.99</p>
-                <p class="product-description font-secondary">
-                  Light and airy vanilla cupcake with creamy buttercream swirl.
+                <h3 class="product-name">Classic Vanilla Cupcake</h3>
+                <p class="product-price">$3.99</p>
+                <p class="product-description visually-hidden">
+                  Light and airy vanilla cupcake with creamy buttercream swirl
                 </p>
+                <button class="card-add-to-cart btn button-primary">
+                  Add to Cart
+                </button>
               </div>
-
               <div class="product-card">
                 <img
-                  src="images/product4.png"
+                  src="assets/images/products/single-cake-1.jpg"
                   alt="Red Velvet Cupcake"
                   class="product-image"
                 />
-                <h3 class="product-name font-secondary">Red Velvet Cupcake</h3>
-                <p class="product-price font-primary">$5.99</p>
-                <p class="product-description font-secondary">
+                <h3 class="product-name">Red Velvet Cupcake</h3>
+                <p class="product-price">$5.99</p>
+                <p class="product-description visually-hidden">
                   A soft, rich red velvet base with luscious cream cheese
-                  frosting.
+                  frosting
                 </p>
+                <button class="card-add-to-cart btn button-primary">
+                  Add to Cart
+                </button>
               </div>
             </div>
-
             <div class="products-button-wrapper">
-              <a href="#products" class="button-primary">Explore Cupcakes</a>
+              <a href="shop.html" class="btn button-primary"
+                >Explore Cupcakes</a
+              >
             </div>
           </div>
         </div>
       </section>
-
-      <!-- Portfolio Section -->
-      <section id="portfolio" class="portfolio-outer-wrapper">
-        <div class="portfolio-inner-wrapper">
-          <div class="portfolio-inner">
-            <div class="portfolio-header">
-              <h2 class="portfolio-title font-display">Our Creations</h2>
-              <p class="portfolio-subtitle font-secondary">
-                Discover our delicious creations.
-              </p>
-            </div>
-
-            <!-- Portfolio Images -->
-            <div class="portfolio-images">
-              <div class="portfolio-image-wrapper">
-                <img
-                  src="images/portfolio1.png"
-                  alt="Portfolio Project 1"
-                  class="portfolio-full-image"
-                />
-              </div>
-              <div class="portfolio-image-wrapper">
-                <img
-                  src="images/portfolio2.png"
-                  alt="Portfolio Project 2"
-                  class="portfolio-full-image"
-                />
-              </div>
-            </div>
-          </div>
-
-          <div class="portfolio-button-wrapper">
-            <a href="#portfolio" class="button-primary">See Portfolio</a>
-          </div>
-        </div>
-      </section>
-
       <!-- About Section -->
       <section id="about" class="about-outer-wrapper">
         <div class="about-inner-wrapper">
           <div class="about-header">
             <h2 class="about-title font-display">About Cakery</h2>
             <p class="about-subtitle font-secondary">
-              Baking joy with every bite.
+              Baking joy with every bite
             </p>
           </div>
           <div class="about-inner">
             <div class="about-item">
               <div class="about-image-wrapper">
                 <img
-                  src="images/about1.png"
-                  alt="About Us 1"
+                  src="assets/images/our-bakery.jpg"
+                  alt="About Us"
                   class="about-image"
+                  loading="lazy"
                 />
               </div>
               <div class="about-text">
                 <h2 class="about-title font-display">Baked with Love</h2>
                 <p class="about-subtitle font-secondary">
                   Every cake is baked fresh, filled with love, and crafted to
-                  make your moments special.
+                  make your moments special
                 </p>
-                <a href="#products" class="about-button">Our Vision</a>
+                <a href="#about" class="btn button-primary">About Us</a>
               </div>
             </div>
 
             <div class="about-item reverse">
               <div class="about-image-wrapper">
                 <img
-                  src="images/about2.png"
-                  alt="About Us 2"
+                  src="assets/images/our-team.jpg"
+                  alt="Passion for Pastry"
                   class="about-image"
+                  loading="lazy"
                 />
               </div>
               <div class="about-text">
                 <h2 class="about-title font-display">Passion for Pastry</h2>
                 <p class="about-subtitle font-secondary">
                   At Cakery, tradition meets creativity to bring unforgettable
-                  flavors.
+                  flavors
                 </p>
-                <a href="#products" class="about-button">Learn More</a>
+                <a href="#about" class="btn button-primary">Learn More</a>
               </div>
             </div>
           </div>
           <div class="about-button-wrapper">
-            <a href="products.html" class="button-primary">Meet the Team</a>
+            <a href="#about" class="btn button-primary">Meet the Team</a>
           </div>
         </div>
       </section>
@@ -346,16 +325,6 @@
             </a>
           </li>
           <li>
-            <a href="#" aria-label="SoundCloud">
-              <i class="fab fa-soundcloud"></i>
-            </a>
-          </li>
-          <li>
-            <a href="#" aria-label="Spotify">
-              <i class="fab fa-spotify"></i>
-            </a>
-          </li>
-          <li>
             <a href="#" aria-label="YouTube">
               <i class="fab fa-youtube"></i>
             </a>
@@ -367,19 +336,25 @@
     <!-- =================== CONTACT SECTION =================== -->
     <section id="contact" class="contact-outer-wrapper">
       <div class="contact-inner-wrapper">
+        <div class="contact-header">
+          <h2 class="contact-title font-display">Contact Us</h2>
+          <p class="contact-subtitle font-secondary">
+            We'd love to hear from you — reach out anytime!
+          </p>
+        </div>
         <div class="contact-grid">
           <!-- Map (Left) -->
           <div class="contact-map-wrapper">
             <div class="contact-map-header">
-              <h2 class="contact-title font-display">London</h2>
+              <h2 class="contact-title font-display">Copenhagen</h2>
               <p class="contact-subtitle font-secondary">
-                Our bakery inspiration comes from the heart of London.
+                Our bakery inspiration comes from the heart of Copenhagen
               </p>
             </div>
 
             <div class="contact-map">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19800.67875689823!2d-0.13563843148862788!3d51.50986514534226!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761b333f79efb5%3A0xe7b92c212343ecde!2sLondon%2C%20UK!5e0!3m2!1sen!2sus!4v1714302199999!5m2!1sen!2sus"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2240.948604521878!2d12.56833781592554!3d55.67609618053692!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4652530c5b1c6f1d%3A0x402f62b74107e20!2sCopenhagen%2C%20Denmark!5e0!3m2!1sen!2sus!4v1714399112345!5m2!1sen!2sus"
                 width="100%"
                 height="100%"
                 style="border: 0; border-radius: 0.75rem"
@@ -400,18 +375,39 @@
 
             <div class="contact-details">
               <p>
-                <i class="fas fa-envelope"></i>
-                <a href="mailto:hello@cakery.com" class="link-muted"
+                <a href="mailto:hello@cakery.com" class="link-primary"
                   >hello@cakery.com</a
                 >
               </p>
               <p>
-                <i class="fas fa-phone"></i>
-                <a href="tel:+1234567890" class="link-muted">
+                <a href="tel:+1234567890" class="link-primary">
                   +1 (234) 567-890
                 </a>
               </p>
+              <ul class="social-links">
+                <li>
+                  <a href="#" aria-label="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" aria-label="YouTube">
+                    <i class="fab fa-youtube"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                  </a>
+                </li>
+              </ul>
             </div>
+
             <div class="contact-social">
               <div class="newsletter-wrapper">
                 <h3 class="newsletter-title font-display">
@@ -436,33 +432,6 @@
                   </button>
                 </form>
               </div>
-              <ul class="social-links">
-                <li>
-                  <a href="#" aria-label="Facebook"
-                    ><i class="fab fa-facebook-f"></i
-                  ></a>
-                </li>
-                <li>
-                  <a href="#" aria-label="Instagram"
-                    ><i class="fab fa-instagram"></i
-                  ></a>
-                </li>
-                <li>
-                  <a href="#" aria-label="SoundCloud"
-                    ><i class="fab fa-soundcloud"></i
-                  ></a>
-                </li>
-                <li>
-                  <a href="#" aria-label="Spotify"
-                    ><i class="fab fa-spotify"></i
-                  ></a>
-                </li>
-                <li>
-                  <a href="#" aria-label="YouTube"
-                    ><i class="fab fa-youtube"></i
-                  ></a>
-                </li>
-              </ul>
             </div>
           </div>
         </div>
@@ -471,76 +440,18 @@
 
     <!-- =================== FOOTER =================== -->
     <footer class="footer-outer-wrapper">
-      <div class="footer-inner-wrapper">
-        <div class="footer-inner">
-          <div class="footer-contact">
-            <h3 class="footer-title font-secondary">Contact Us</h3>
-            <p>
-              <i class="fas fa-envelope"></i>
-              <a href="mailto:hello@cakery.com" class="link-muted"
-                >hello@cakery.com</a
-              >
-            </p>
-            <p>
-              <i class="fas fa-phone"></i>
-              <a href="tel:+1234567890" class="link-muted">+1 (234) 567-890</a>
-            </p>
-          </div>
-
-          <div class="footer-social">
-            <h3 class="footer-title font-secondary">Connect With Us</h3>
-            <ul class="social-links">
-              <li>
-                <a href="#" aria-label="Facebook">
-                  <i class="fab fa-facebook-f"></i>
-                </a>
-              </li>
-              <li>
-                <a href="#" aria-label="Instagram">
-                  <i class="fab fa-instagram"></i>
-                </a>
-              </li>
-              <li>
-                <a href="#" aria-label="SoundCloud">
-                  <i class="fab fa-soundcloud"></i>
-                </a>
-              </li>
-              <li>
-                <a href="#" aria-label="Spotify">
-                  <i class="fab fa-spotify"></i>
-                </a>
-              </li>
-              <li>
-                <a href="#" aria-label="YouTube">
-                  <i class="fab fa-youtube"></i>
-                </a>
-              </li>
-              <li>
-                <a href="#" aria-label="LinkedIn">
-                  <i class="fab fa-linkedin-in"></i>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
       <div class="footer-bottom">
         <div class="footer-logo-wrapper">
-          <img
-            src="images/logo.png"
-            alt="Cakery Logo
-"
-            class="footer-logo light-logo"
-          />
-          <img
-            src="images/logo-dark.png"
-            alt="Cakery Dark Logo"
-            class="footer-logo dark-logo"
-          />
+          <a href="#home" class="logo-link">
+            <img
+              src="assets/images/logo.png"
+              alt="Cakery Logo"
+              class="logo-image light-logo"
+            />
+          </a>
         </div>
         <p class="font-secondary link-muted">
-          &copy; 2025 Cakery — Baked with ❤️ for you
+          <small>&copy; 2025 Cakery — Baked with 🩷 for you</small>
         </p>
       </div>
     </footer>
@@ -551,28 +462,37 @@
       <h3 class="dev-menu-title">Dev Menu</h3>
       <ul>
         <li><a href="#top">Scroll to Top</a></li>
-        <li><a href="#products">Scroll to Products</a></li>
-        <li>
-          <a href="#" onclick="toggleDarkMode(event)">Toggle Dark Mode</a>
-        </li>
         <li><a href="#clear-storage">Clear LocalStorage</a></li>
       </ul>
     </div>
-
-    <!-- =================== SIMPLE MODAL =================== -->
-    <div id="simple-modal" class="modal-overlay">
+    <!-- =================== MODAL =================== -->
+    <div
+      id="simple-modal"
+      class="modal-overlay"
+      aria-hidden="true"
+      role="dialog"
+      aria-modal="true"
+    >
       <div class="modal-content">
         <button id="close-simple-modal" class="modal-close">&times;</button>
+
+        <!-- image stays -->
         <img
           id="modal-product-image"
           src=""
           alt="Product Image"
           class="modal-image"
         />
-        <h2 id="modal-product-name"></h2>
-        <p id="modal-product-price"></p>
-        <p id="modal-product-description"></p>
-        <button id="modal-add-to-cart" class="btn-primary">Add to Cart</button>
+
+        <!-- wrap all the text/buttons here -->
+        <div class="modal-details">
+          <h2 id="modal-product-name"></h2>
+          <p id="modal-product-price"></p>
+          <p id="modal-product-description"></p>
+          <button id="modal-add-to-cart" class="btn button-primary">
+            Add to Cart
+          </button>
+        </div>
       </div>
     </div>
 
