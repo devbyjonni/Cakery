@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Shop | Munamii Cakery</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/shop.css" />
+  </head>
+
+  <body>
+    <!-- =================== HEADER =================== -->
+    <header class="header-outer-wrapper">
+      <!-- Promo Banner -->
+      <div class="promo-banner-outer-wrapper">
+        <a href="#shop" class="promo-banner-link font-secondary">
+          <div class="promo-banner-inner-wrapper font-secondary">
+            <p>
+              <strong>🎉 50% OFF</strong> for all Cupcakes — This Week Only!
+            </p>
+          </div>
+        </a>
+      </div>
+
+      <div class="header-inner-wrapper">
+        <div class="header-inner">
+          <!-- Logo -->
+          <div class="site-brand">
+            <h1 class="visually-hidden">Cakery</h1>
+            <a href="index.html" class="logo-link">
+              <img
+                src="assets/images/logo.png"
+                alt="Cakery Logo"
+                class="logo-image light-logo"
+              />
+            </a>
+          </div>
+
+          <!-- Navigation -->
+          <div class="navigation-wrapper">
+            <nav
+              class="main-nav"
+              role="navigation"
+              aria-label="Main Navigation"
+            >
+              <ul class="nav-links">
+                <li>
+                  <a href="index.html" class="link-secondary font-secondary"
+                    >← Back Home</a
+                  >
+                </li>
+              </ul>
+            </nav>
+          </div>
+
+          <!-- User Actions -->
+          <div class="user-actions font-secondary">
+            <div class="user-info">
+              <span class="user-greeting font-secondary">Hi, Guest</span>
+
+              <!-- Cart -->
+              <div class="cart-dropdown-wrapper">
+                <a href="#" class="cart" id="cartToggle" aria-label="Cart">
+                  <i class="fas fa-shopping-cart"></i>
+                  <span class="cart-count">2</span>
+                </a>
+
+                <div class="cart-dropdown" id="cartDropdown">
+                  <p class="cart-item">🧁 Chocolate Fudge Cupcake - $4.99</p>
+                  <p class="cart-item">🧁 Strawberry Delight Cupcake - $5.49</p>
+                  <hr />
+                  <p class="cart-total"><strong>Total: $10.48</strong></p>
+                  <a href="#top" class="checkout-btn">Go to Checkout</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button
+              class="menu-toggle"
+              aria-label="Toggle navigation"
+              aria-expanded="false"
+              aria-controls="main-nav"
+            >
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Products Section -->
+    <section id="shop" class="products-outer-wrapper">
+      <div class="products-inner-wrapper">
+        <div class="products-inner">
+          <div class="products-header">
+            <h1 class="products-title">Our Cupcakes</h1>
+            <p class="products-subtitle">
+              Freshly baked cupcakes to sweeten your day
+            </p>
+          </div>
+
+          <!-- Product Grid -->
+          <div class="products-grid">
+            <!-- Product 1 -->
+            <div class="product-card">
+              <img
+                src="assets/images/products/single-cake-5.jpg"
+                alt="Chocolate Cupcake"
+                class="product-image"
+                loading="lazy"
+              />
+              <h3 class="product-name">Chocolate Cupcake</h3>
+              <p class="product-price">$4.99</p>
+              <p class="product-description visually-hidden">
+                Rich, moist chocolate cupcake topped with smooth fudge frosting.
+              </p>
+              <button class="card-add-to-cart btn button-primary">
+                Add to Cart
+              </button>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product-card">
+              <img
+                src="assets/images/products/single-cake-2.jpg"
+                alt="Strawberry Cupcake"
+                class="product-image"
+                loading="lazy"
+              />
+              <h3 class="product-name">Strawberry Cupcake</h3>
+              <p class="product-price">$5.49</p>
+              <p class="product-description visually-hidden">
+                Fluffy vanilla cake filled with fresh strawberry compote and
+                cream.
+              </p>
+              <button class="card-add-to-cart btn button-primary">
+                Add to Cart
+              </button>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product-card">
+              <img
+                src="assets/images/products/single-cake-6.jpg"
+                alt="Vanilla Cupcake"
+                class="product-image"
+                loading="lazy"
+              />
+              <h3 class="product-name">Vanilla Cupcake</h3>
+              <p class="product-price">$3.99</p>
+              <p class="product-description visually-hidden">
+                Light and airy vanilla cupcake with creamy buttercream swirl.
+              </p>
+              <button class="card-add-to-cart btn button-primary">
+                Add to Cart
+              </button>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="product-card">
+              <img
+                src="assets/images/products/single-cake-1.jpg"
+                alt="Red Velvet Cupcake"
+                class="product-image"
+                loading="lazy"
+              />
+              <h3 class="product-name">Red Velvet Cupcake</h3>
+              <p class="product-price">$5.99</p>
+              <p class="product-description visually-hidden">
+                A soft, rich red velvet base with luscious cream cheese
+                frosting.
+              </p>
+              <button class="card-add-to-cart btn button-primary">
+                Add to Cart
+              </button>
+            </div>
+
+            <!-- Product 5 -->
+            <div class="product-card">
+              <img
+                src="assets/images/products/single-cake-3.jpg"
+                alt="Caramel Cupcake"
+                class="product-image"
+                loading="lazy"
+              />
+              <h3 class="product-name">Caramel Cupcake</h3>
+              <p class="product-price">$5.49</p>
+              <p class="product-description visually-hidden">
+                Sweet caramel swirl with a buttery cupcake base.
+              </p>
+              <button class="card-add-to-cart btn button-primary">
+                Add to Cart
+              </button>
+            </div>
+
+            <!-- Product 6 -->
+            <div class="product-card">
+              <img
+                src="assets/images/products/single-cake-4.jpg"
+                alt="Lemon Cupcake"
+                class="product-image"
+                loading="lazy"
+              />
+              <h3 class="product-name">Lemon Cupcake</h3>
+              <p class="product-price">$4.79</p>
+              <p class="product-description visually-hidden">
+                Zesty lemon cupcake with a light lemon glaze.
+              </p>
+              <button class="card-add-to-cart btn button-primary">
+                Add to Cart
+              </button>
+            </div>
+
+            <!-- Product 7 -->
+            <div class="product-card">
+              <img
+                src="assets/images/products/single-cake-7.jpg"
+                alt="Coconut Cupcake"
+                class="product-image"
+                loading="lazy"
+              />
+              <h3 class="product-name">Coconut Cupcake</h3>
+              <p class="product-price">$4.99</p>
+              <p class="product-description visually-hidden">
+                Moist vanilla cupcake with coconut frosting and sprinkles.
+              </p>
+              <button class="card-add-to-cart btn button-primary">
+                Add to Cart
+              </button>
+            </div>
+
+            <!-- Product 8 -->
+            <div class="product-card">
+              <img
+                src="assets/images/products/single-cake-8.jpg"
+                alt="Pistachio Cupcake"
+                class="product-image"
+                loading="lazy"
+              />
+              <h3 class="product-name">Pistachio Cupcake</h3>
+              <p class="product-price">$6.29</p>
+              <p class="product-description visually-hidden">
+                Soft pistachio sponge with a hint of almond frosting.
+              </p>
+              <button class="card-add-to-cart btn button-primary">
+                Add to Cart
+              </button>
+            </div>
+          </div>
+
+          <div class="products-button-wrapper">
+            <a href="index.html" class="btn button-primary">Back to Home</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================== SOCIAL CONNECT SECTION =================== -->
+    <section class="social-connect-outer-wrapper">
+      <div class="social-connect-inner-wrapper">
+        <h2 class="social-connect-title font-display">Follow Cakery</h2>
+        <p class="social-connect-subtitle font-secondary">
+          Stay connected and be the first to hear about our latest cupcakes,
+          special offers, and sweet news!
+        </p>
+        <ul class="social-links">
+          <li>
+            <a href="#" aria-label="Facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#" aria-label="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#" aria-label="YouTube">
+              <i class="fab fa-youtube"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- =================== FOOTER =================== -->
+    <footer class="footer-outer-wrapper">
+      <div class="footer-bottom">
+        <div class="footer-logo-wrapper">
+          <a href="#home" class="logo-link">
+            <img
+              src="assets/images/logo.png"
+              alt="Cakery Logo"
+              class="logo-image light-logo"
+            />
+          </a>
+        </div>
+        <p class="font-secondary link-muted">
+          <small>&copy; 2025 Cakery — Baked with 🩷 for you</small>
+        </p>
+      </div>
+    </footer>
+
+    <!-- =================== DEV MENU =================== -->
+    <div class="dev-badge" id="devBadge">DEV</div>
+    <div class="dev-menu" id="devMenu">
+      <h3 class="dev-menu-title">Dev Menu</h3>
+      <ul>
+        <li><a href="#top">Scroll to Top</a></li>
+        <li><a href="#clear-storage">Clear LocalStorage</a></li>
+      </ul>
+    </div>
+    <!-- =================== MODAL =================== -->
+    <div
+      id="simple-modal"
+      class="modal-overlay"
+      aria-hidden="true"
+      role="dialog"
+      aria-modal="true"
+    >
+      <div class="modal-content">
+        <button id="close-simple-modal" class="modal-close">&times;</button>
+        <!-- image stays -->
+        <img
+          id="modal-product-image"
+          src=""
+          alt="Product Image"
+          class="modal-image"
+        />
+        <!-- wrap all the text/buttons here -->
+        <div class="modal-details">
+          <h2 id="modal-product-name"></h2>
+          <p id="modal-product-price"></p>
+          <p id="modal-product-description"></p>
+          <button id="modal-add-to-cart" class="btn button-primary">
+            Add to Cart
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- Scripts -->
+    <script type="module" src="js/main.js"></script>
+  </body>
+</html>

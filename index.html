@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Munamii Cakery</title>
-
+    <title>Cakery</title>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap"
       rel="stylesheet"
@@ -15,285 +15,487 @@
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Open+Sans&display=swap"
       rel="stylesheet"
     />
-
-    <!-- Font Awesome -->
+    <!-- Font Awesome (Icons) -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-
-    <!-- Main Stylesheet -->
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="css/main.css" />
   </head>
 
-  <body>
-    <!-- Header & Navigation -->
-    <header>
+  <body id="top" class="font-primary">
+    <!-- =================== HEADER =================== -->
+    <header class="header-outer-wrapper">
       <!-- Promo Banner -->
-      <div class="promo-banner">
-        <p>
-          <strong>🎉 50% OFF</strong> for all new customers – this week only!
-        </p>
-      </div>
-      <div class="top-bar">
-        <div class="logo hidden">
-          <h1>Munamii Cakery</h1>
-          <span class="tagline">Best cakes in the world</span>
-        </div>
-      </div>
-      <nav class="main-nav">
-        <div class="nav-container">
-          <ul class="nav-links">
-            <li><a href="#home" class="link-secondary">Home</a></li>
-            <li><a href="#about" class="link-secondary">About</a></li>
-            <li><a href="products.html" class="link-secondary">Products</a></li>
-            <li><a href="#giftcard" class="link-secondary">Gift Card</a></li>
-            <li><a href="#contact" class="link-secondary">Contact</a></li>
-          </ul>
-
-          <div class="nav-actions">
-            <a href="#" class="cart" aria-label="Cart">
-              <i class="fas fa-shopping-cart"></i>
-              <span class="cart-count">0</span>
-            </a>
-            <button class="btn btn-secondary reset-cart-btn">Reset Cart</button>
-          </div>
-        </div>
-      </nav>
-    </header>
-
-    <!-- Hero Section -->
-    <section class="hero-wrapper" id="home">
-      <div class="hero">
-        <img
-          src="assets/images/hero.jpg"
-          alt="Decorated cake shop"
-          class="hero-image"
-        />
-        <div class="hero-logo">
-          <img
-            src="assets/images/logo.png"
-            alt="Munamii Cakery logo"
-            class="hero-logo-img"
-          />
-          <div class="logo-stars">★★★★★</div>
-          <div class="logo-sale">Sale 50% Off</div>
-          <a href="#products" class="btn btn-secondary order-btn"
-            >View More Products</a
-          >
-        </div>
-      </div>
-    </section>
-
-    <main>
-      <!-- Product Section -->
-      <section class="product-section" id="products">
-        <div class="product-wrap">
-          <h2 class="heading-2 heading-primary">Explore Our Creations</h2>
-          <p class="text-base text-secondary">
-            From elegant wedding cakes to fun cupcakes, we have something for
-            every occasion. Check out our
-            <a href="products.html" class="link-primary">Products</a> page to
-            browse more.
-          </p>
-          <div class="card-grid"></div>
-          <div class="more-products-btn-wrap">
-            <a href="products.html" class="btn btn-secondary order-btn"
-              >View More Products</a
-            >
-          </div>
-        </div>
-      </section>
-
-      <!-- Gift Card Section -->
-      <section class="giftcard-section" id="giftcard">
-        <div class="giftcard-wrap">
-          <h2 class="heading-2 heading-primary">Give the Gift of Sweetness</h2>
-          <p class="text-base text-secondary">
-            Surprise your loved ones with a treat they’ll never forget. Our
-            elegant gift cards are perfect for birthdays, weddings, and any
-            sweet celebration.
-          </p>
-          <div class="giftcard-grid">
-            <div class="giftcard-img">
-              <img src="assets/images/gift-card-box.jpg" alt="Gift Card Box" />
-            </div>
-            <div class="giftcard-content">
-              <p class="giftcard-offer">✨ Available in‑store & online ✨</p>
-              <!-- <a href="#order" class="order-btn">Buy a Gift Card</a> -->
-              <a href="#order" class="btn btn-primary order-btn"
-                >Buy a Gift Card</a
-              >
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- About Section -->
-      <section class="about-section" id="about">
-        <div class="about-wrap">
-          <h2 class="heading-2 heading-primary">About Munamii</h2>
-          <p class="text-base text-secondary">
-            At Munamii Cakery, we believe every celebration deserves a sweet
-            centerpiece. Our journey started in a small kitchen with a big dream
-            — to craft beautiful, delicious treats that bring joy to every bite.
-          </p>
-          <div class="about-grid">
-            <div class="about-card">
-              <img src="assets/images/our-team.jpg" alt="Our Team" />
-              <p class="about-caption">
-                Meet our warm‑hearted team in the Munamii kitchen
-              </p>
-            </div>
-            <div class="about-card">
-              <img src="assets/images/our-bakery.jpg" alt="Our Bakery" />
-              <p class="about-caption">
-                A peek into our charming cakery filled with joy
-              </p>
-            </div>
-            <div class="about-card">
-              <img
-                src="assets/images/about-kitchen.jpg"
-                alt="Cupcake Decorating"
-              />
-              <p class="about-caption">
-                Every cake handcrafted with love and detail
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Contact Section -->
-      <section class="contact-section" id="contact">
-        <div class="contact-container">
-          <div class="contact-wrap">
-            <h2 class="heading-2 heading-primary">Contact Us</h2>
-            <p class="text-base text-secondary">
-              We'd love to hear from you! Whether you have questions, custom
-              orders, or just want to say hi.
+      <div class="promo-banner-outer-wrapper">
+        <a href="#shop" class="promo-banner-link font-secondary">
+          <div class="promo-banner-inner-wrapper font-secondary">
+            <p>
+              <strong>🎉 50% OFF</strong> for all Cupcakes — This Week Only!
             </p>
-            <div class="contact-socials">
-              <a
-                href="https://facebook.com/munamiicupcakes"
-                target="_blank"
-                aria-label="Facebook"
-                class="social-icon"
-              >
-                <i class="fab fa-facebook-f"></i>
-              </a>
-              <a
-                href="https://instagram.com/munamii.cakery"
-                target="_blank"
-                aria-label="Instagram"
-                class="social-icon"
-              >
-                <i class="fab fa-instagram"></i>
-              </a>
-            </div>
-            <div class="locations-wrap">
-              <div class="contact-two-column">
-                <div class="location-card">
-                  <h3 class="heading-3 heading-primary">New York</h3>
-                  <iframe
-                    src="https://www.google.com/maps/embed?pb=..."
-                    width="100%"
-                    height="200"
-                    style="border: 0; border-radius: 8px"
-                    allowfullscreen=""
-                    loading="lazy"
-                  ></iframe>
-                  <p>
-                    <strong>Address:</strong> 123 Cupcake Lane, New York, NY
-                  </p>
-                  <p><strong>Phone:</strong> (212) 555‑1234</p>
-                </div>
-                <div class="contact-form-card">
-                  <h3 class="heading-3 heading-primary">Send a Message</h3>
-                  <form class="contact-form">
-                    <input
-                      type="text"
-                      name="name"
-                      placeholder="Your Name"
-                      required
-                    />
-                    <input
-                      type="email"
-                      name="email"
-                      placeholder="Your Email"
-                      required
-                    />
-                    <textarea
-                      name="message"
-                      rows="4"
-                      placeholder="Your Message"
-                    ></textarea>
-                    <!-- <button type="submit" class="order-btn">Send</button> -->
-                    <button type="submit" class="btn-primary">Send</button>
-                  </form>
+          </div>
+        </a>
+      </div>
+
+      <div class="header-inner-wrapper">
+        <div class="header-inner">
+          <!-- Logo -->
+          <div class="site-brand">
+            <h1 class="visually-hidden">Cakery</h1>
+            <a href="index.html" class="logo-link">
+              <img
+                src="assets/images/logo.png"
+                alt="Cakery Logo"
+                class="logo-image light-logo"
+              />
+            </a>
+          </div>
+
+          <!-- Navigation -->
+          <div class="navigation-wrapper">
+            <nav
+              class="main-nav"
+              role="navigation"
+              aria-label="Main Navigation"
+            >
+              <ul class="nav-links">
+                <li>
+                  <a href="#home" class="link-secondary active font-secondary"
+                    >Home</a
+                  >
+                </li>
+                <li>
+                  <a href="shop.html" class="link-secondary font-secondary"
+                    >Shop</a
+                  >
+                </li>
+                <li>
+                  <a href="#about" class="link-secondary font-secondary"
+                    >About</a
+                  >
+                </li>
+                <li>
+                  <a href="#contact" class="link-secondary font-secondary"
+                    >Contact</a
+                  >
+                </li>
+              </ul>
+            </nav>
+          </div>
+
+          <!-- User Actions -->
+          <div class="user-actions font-secondary">
+            <div class="user-info">
+              <span class="user-greeting font-secondary">Hi, Guest</span>
+
+              <!-- Cart -->
+              <div class="cart-dropdown-wrapper">
+                <a href="#" class="cart" id="cartToggle" aria-label="Cart">
+                  <i class="fas fa-shopping-cart"></i>
+                  <span class="cart-count">2</span>
+                </a>
+
+                <div class="cart-dropdown" id="cartDropdown">
+                  <p class="cart-item">🧁 Chocolate Fudge Cupcake - $4.99</p>
+                  <p class="cart-item">🧁 Strawberry Delight Cupcake - $5.49</p>
+                  <hr />
+                  <p class="cart-total"><strong>Total: $10.48</strong></p>
+                  <a href="#top" class="checkout-btn">Go to Checkout</a>
                 </div>
               </div>
             </div>
+
+            <!-- Mobile Menu Button -->
+            <button
+              class="menu-toggle"
+              aria-label="Toggle navigation"
+              aria-expanded="false"
+              aria-controls="main-nav"
+            >
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- =================== MAIN CONTENT =================== -->
+    <main class="main-outer-wrapper font-primary">
+      <!-- Hero Section -->
+      <section id="home" class="hero-outer-wrapper">
+        <div class="hero-inner-wrapper">
+          <div class="hero-inner">
+            <!-- Image Slider -->
+            <div class="hero-slider">
+              <img
+                src="assets/images/hero1.png"
+                alt="Hero 1"
+                class="hero-slide"
+              />
+              <img
+                src="assets/images/hero1.png"
+                alt="Hero 2"
+                class="hero-slide"
+              />
+            </div>
+          </div>
+        </div>
+        <!-- Hero Content -->
+        <div class="hero-content">
+          <div class="site-brand">
+            <h1 class="visually-hidden">Cakery</h1>
+            <a href="index.html" class="logo-link">
+              <img
+                src="assets/images/logo.png"
+                alt="Cakery Logo"
+                class="logo-image light-logo"
+              />
+            </a>
+          </div>
+          <h1 class="hero-title font-display">Delight in Every Bite</h1>
+          <p class="hero-subtitle font-secondary">
+            Handcrafted cupcakes made with love and passion
+          </p>
+          <div class="hero-pagination visually-hidden"></div>
+        </div>
+      </section>
+
+      <!-- Products Section -->
+      <section id="shop" class="products-outer-wrapper">
+        <div class="logo-stars">★★★★★</div>
+        <div class="products-inner-wrapper">
+          <div class="products-inner">
+            <div class="products-header visually-hidden">
+              <h2 class="products-title">Our Cupcakes</h2>
+              <p class="products-subtitle">
+                Freshly baked cupcakes to sweeten your day
+              </p>
+            </div>
+            <!-- Product Grid -->
+            <div class="products-grid">
+              <div class="product-card">
+                <img
+                  src="assets/images/products/single-cake-5.jpg"
+                  alt="Chocolate Fudge Cupcake"
+                  class="product-image"
+                />
+                <h3 class="product-name">Chocolate Cupcake</h3>
+                <p class="product-price">$4.99</p>
+                <p class="product-description visually-hidden">
+                  Rich, moist chocolate cupcake topped with smooth fudge
+                  frosting
+                </p>
+                <button class="card-add-to-cart btn button-primary">
+                  Add to Cart
+                </button>
+              </div>
+              <div class="product-card">
+                <img
+                  src="assets/images/products/single-cake-2.jpg"
+                  alt="Strawberry Delight Cupcake"
+                  class="product-image"
+                />
+                <h3 class="product-name">Strawberry Cupcake</h3>
+                <p class="product-price">$5.49</p>
+                <p class="product-description visually-hidden">
+                  Fluffy vanilla cake filled with fresh strawberry compote and
+                  cream
+                </p>
+                <button class="card-add-to-cart btn button-primary">
+                  Add to Cart
+                </button>
+              </div>
+              <div class="product-card">
+                <img
+                  src="assets/images/products/single-cake-6.jpg"
+                  alt="Classic Vanilla Cupcake"
+                  class="product-image"
+                />
+                <h3 class="product-name">Classic Vanilla Cupcake</h3>
+                <p class="product-price">$3.99</p>
+                <p class="product-description visually-hidden">
+                  Light and airy vanilla cupcake with creamy buttercream swirl
+                </p>
+                <button class="card-add-to-cart btn button-primary">
+                  Add to Cart
+                </button>
+              </div>
+              <div class="product-card">
+                <img
+                  src="assets/images/products/single-cake-1.jpg"
+                  alt="Red Velvet Cupcake"
+                  class="product-image"
+                />
+                <h3 class="product-name">Red Velvet Cupcake</h3>
+                <p class="product-price">$5.99</p>
+                <p class="product-description visually-hidden">
+                  A soft, rich red velvet base with luscious cream cheese
+                  frosting
+                </p>
+                <button class="card-add-to-cart btn button-primary">
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+            <div class="products-button-wrapper">
+              <a href="shop.html" class="btn button-primary"
+                >Explore Cupcakes</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- About Section -->
+      <section id="about" class="about-outer-wrapper">
+        <div class="about-inner-wrapper">
+          <div class="about-header">
+            <h2 class="about-title font-display">About Cakery</h2>
+            <p class="about-subtitle font-secondary">
+              Baking joy with every bite
+            </p>
+          </div>
+          <div class="about-inner">
+            <div class="about-item">
+              <div class="about-image-wrapper">
+                <img
+                  src="assets/images/our-bakery.jpg"
+                  alt="About Us"
+                  class="about-image"
+                  loading="lazy"
+                />
+              </div>
+              <div class="about-text">
+                <h2 class="about-title font-display">Baked with Love</h2>
+                <p class="about-subtitle font-secondary">
+                  Every cake is baked fresh, filled with love, and crafted to
+                  make your moments special
+                </p>
+                <a href="#about" class="btn button-primary">About Us</a>
+              </div>
+            </div>
+
+            <div class="about-item reverse">
+              <div class="about-image-wrapper">
+                <img
+                  src="assets/images/our-team.jpg"
+                  alt="Passion for Pastry"
+                  class="about-image"
+                  loading="lazy"
+                />
+              </div>
+              <div class="about-text">
+                <h2 class="about-title font-display">Passion for Pastry</h2>
+                <p class="about-subtitle font-secondary">
+                  At Cakery, tradition meets creativity to bring unforgettable
+                  flavors
+                </p>
+                <a href="#about" class="btn button-primary">Learn More</a>
+              </div>
+            </div>
+          </div>
+          <div class="about-button-wrapper">
+            <a href="#about" class="btn button-primary">Meet the Team</a>
           </div>
         </div>
       </section>
     </main>
 
-    <!-- Footer -->
-    <footer>
-      <p>&copy; 2025 Munamii Cakery</p>
-      <p>
-        <a
-          href="https://instagram.com/munamii.cakery"
-          class="link-secondary"
-          target="_blank"
-          >Instagram</a
-        >
-        |
-        <a
-          href="https://facebook.com/munamiicupcakes"
-          class="link-secondary"
-          target="_blank"
-          >Facebook</a
-        >
-        |
-        <a href="mailto:info@munamiicakery.com" class="link-secondary"
-          >Email Us</a
-        >
-      </p>
+    <!-- =================== SOCIAL CONNECT SECTION =================== -->
+    <section class="social-connect-outer-wrapper">
+      <div class="social-connect-inner-wrapper">
+        <h2 class="social-connect-title font-display">Follow Cakery</h2>
+        <p class="social-connect-subtitle font-secondary">
+          Stay connected and be the first to hear about our latest cupcakes,
+          special offers, and sweet news!
+        </p>
+        <ul class="social-links">
+          <li>
+            <a href="#" aria-label="Facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#" aria-label="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#" aria-label="YouTube">
+              <i class="fab fa-youtube"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- =================== CONTACT SECTION =================== -->
+    <section id="contact" class="contact-outer-wrapper">
+      <div class="contact-inner-wrapper">
+        <div class="contact-header">
+          <h2 class="contact-title font-display">Contact Us</h2>
+          <p class="contact-subtitle font-secondary">
+            We'd love to hear from you — reach out anytime!
+          </p>
+        </div>
+        <div class="contact-grid">
+          <!-- Map (Left) -->
+          <div class="contact-map-wrapper">
+            <div class="contact-map-header">
+              <h2 class="contact-title font-display">Copenhagen</h2>
+              <p class="contact-subtitle font-secondary">
+                Our bakery inspiration comes from the heart of Copenhagen
+              </p>
+            </div>
+
+            <div class="contact-map">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2240.948604521878!2d12.56833781592554!3d55.67609618053692!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4652530c5b1c6f1d%3A0x402f62b74107e20!2sCopenhagen%2C%20Denmark!5e0!3m2!1sen!2sus!4v1714399112345!5m2!1sen!2sus"
+                width="100%"
+                height="100%"
+                style="border: 0; border-radius: 0.75rem"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+          </div>
+
+          <!-- Contact Info (Right) -->
+          <div class="contact-info-wrapper">
+            <h2 class="contact-title font-display">Let's Bake Together</h2>
+            <p class="contact-subtitle font-secondary">
+              Whether you’re looking for the perfect treat, have questions, or
+              just want to say hi — we’re always excited to connect.
+            </p>
+
+            <div class="contact-details">
+              <p>
+                <a href="mailto:hello@cakery.com" class="link-primary"
+                  >hello@cakery.com</a
+                >
+              </p>
+              <p>
+                <a href="tel:+1234567890" class="link-primary">
+                  +1 (234) 567-890
+                </a>
+              </p>
+              <ul class="social-links">
+                <li>
+                  <a href="#" aria-label="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" aria-label="YouTube">
+                    <i class="fab fa-youtube"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="contact-social">
+              <div class="newsletter-wrapper">
+                <h3 class="newsletter-title font-display">
+                  Subscribe to Our Newsletter
+                </h3>
+                <p class="newsletter-subtitle font-secondary">
+                  Get the latest cupcakes, news, and exclusive offers directly
+                  to your inbox.
+                </p>
+                <form class="newsletter-form">
+                  <input
+                    type="email"
+                    class="newsletter-input"
+                    placeholder="Enter your email"
+                    required
+                  />
+                  <button
+                    type="submit"
+                    class="button-primary newsletter-button"
+                  >
+                    Subscribe
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================== FOOTER =================== -->
+    <footer class="footer-outer-wrapper">
+      <div class="footer-bottom">
+        <div class="footer-logo-wrapper">
+          <a href="#home" class="logo-link">
+            <img
+              src="assets/images/logo.png"
+              alt="Cakery Logo"
+              class="logo-image light-logo"
+            />
+          </a>
+        </div>
+        <p class="font-secondary link-muted">
+          <small>&copy; 2025 Cakery — Baked with 🩷 for you</small>
+        </p>
+      </div>
     </footer>
 
-    <!-- Product Detail Modal -->
-    <div class="modal modal-overlay" id="product-modal">
-      <div class="modal-box modal-content">
-        <button
-          class="modal-close close-modal"
-          id="close-modal"
-          aria-label="Close modal"
-        >
-          &times;
-        </button>
+    <!-- =================== DEV MENU =================== -->
+    <div class="dev-badge" id="devBadge">DEV</div>
+    <div class="dev-menu" id="devMenu">
+      <h3 class="dev-menu-title">Dev Menu</h3>
+      <ul>
+        <li><a href="#top">Scroll to Top</a></li>
+        <li><a href="#clear-storage">Clear LocalStorage</a></li>
+      </ul>
+    </div>
+    <!-- =================== MODAL =================== -->
+    <div
+      id="simple-modal"
+      class="modal-overlay"
+      aria-hidden="true"
+      role="dialog"
+      aria-modal="true"
+    >
+      <div class="modal-content">
+        <button id="close-simple-modal" class="modal-close">&times;</button>
 
-        <div class="modal-image">
-          <img id="modal-product-image" src="" alt="Product" />
-        </div>
+        <!-- image stays -->
+        <img
+          id="modal-product-image"
+          src=""
+          alt="Product Image"
+          class="modal-image"
+        />
 
-        <div class="modal-info">
-          <h2 id="modal-product-name" class="title-primary"></h2>
-          <p id="modal-product-price" class="text-base text-secondary"></p>
-          <p id="modal-product-description" class="text-base">
-            No description available.
-          </p>
-          <p id="modal-product-ingredients" class="text-base"></p>
-          <p id="modal-product-category" class="text-base text-secondary"></p>
-          <button id="modal-add-to-cart" class="btn btn-primary">
+        <!-- wrap all the text/buttons here -->
+        <div class="modal-details">
+          <h2 id="modal-product-name"></h2>
+          <p id="modal-product-price"></p>
+          <p id="modal-product-description"></p>
+          <button id="modal-add-to-cart" class="btn button-primary">
             Add to Cart
           </button>
         </div>
       </div>
     </div>
+
     <!-- Scripts -->
     <script type="module" src="js/main.js"></script>
   </body>

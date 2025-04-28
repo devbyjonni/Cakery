@@ -1,8 +1,38 @@
-/* ----------------------------------------
-   Color Variables & Theme Settings
----------------------------------------- */
-
+/* ===========================================
+   Light Theme (Default)
+=========================================== */
 :root {
+    /* Backgrounds */
+    --color-bg: #fff7f9;
+    /* Soft pink */
+    --color-bg-alt: #fff0f5;
+    /* Light pink */
+    --color-bg-image: #ffffff;
+
+    --content-bg: rgba(255, 247, 249, 1);
+
+    /* Surfaces */
+    --color-surface: #ffffff;
+
+    /* Text Colors */
+    --color-text: #5A3330;
+    /* Main text color */
+    --color-muted-text: #a0522d;
+    /* Brown muted text */
+
+    /* Borders */
+    --color-border: #d6458935;
+    /* Cream border */
+
+    /* Primary Colors */
+    --color-primary: #d64588;
+    /* Main Cakery pink */
+    --color-primary-light: #fff0f5;
+    /* Soft pink */
+    --color-primary-dark: #9c3263;
+    /* Rich pink */
+
+    /* Nice color for UI */
     --pink-light: #fff0f5;
     --pink-main: #d64588;
     --cream: #fbeec1;
@@ -14,28 +44,4 @@
     --rich-pink-main: #9c3263;
     --dark-chocolate: #5A3330;
     --pink-soft: #EFB5D0;
-
-    /* Typography */
-    --font-body: 'Open Sans', sans-serif;
-    --font-heading: 'Playfair Display', serif;
 }
-
-/* ----------------------------------------
-   Dark Mode (Optional Future Add)
----------------------------------------- */
-
-/* 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #2e2e2e;
-    --text: #f3f3f3;
-    --pink-main: #ff69b4;
-    --brown: #deb887;
-  }
-
-  body {
-    background-color: var(--bg);
-    color: var(--text);
-  }
-}
-*/

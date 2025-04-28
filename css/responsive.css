@@ -1,0 +1,39 @@
+/* ===========================================
+   Global Responsive Wrappers
+=========================================== */
+@media (max-width: 768px) {
+
+    /* Remove side padding for outer wrappers */
+    .header-outer-wrapper,
+    .main-outer-wrapper,
+    .footer-outer-wrapper,
+    .promo-banner-outer-wrapper,
+    .hero-outer-wrapper,
+    .products-outer-wrapper,
+    .portfolio-outer-wrapper,
+    .about-outer-wrapper,
+    .contact-outer-wrapper {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    /* Remove side padding for inner wrappers */
+    .footer-inner-wrapper,
+    .products-inner-wrapper,
+    .portfolio-inner-wrapper,
+    .about-inner-wrapper {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .hero-inner-wrapper,
+    .hero-inner {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .contact-inner-wrapper {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
