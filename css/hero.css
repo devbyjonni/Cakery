@@ -110,56 +110,95 @@
 =========================================== */
 
 
+/* ===========================================
+   Hero Content (Main Pink Card)
+=========================================== */
 .hero-content {
     position: absolute;
-    top: 90%;
+    top: 68.5%;
     left: 50%;
     transform: translate(-50%, -50%);
+    width: 600px;
+    /* Fixed width */
     text-align: center;
-    background-color: var(--content-bg);
+    background-color: #fff7f9dd;
+    /* Solid pastel pink */
     backdrop-filter: blur(5px);
-    border-radius: 0.75rem;
+    border-radius: 0.75rem 0.75rem 0 0;
+    /* Rounded top only */
     z-index: 10;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 4rem;
-    padding-top: 1rem;
-    padding-bottom: 2rem;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    padding: 1rem 1rem 2rem;
+    box-shadow:
+        0 -4px 8px rgba(0, 0, 0, 0.08),
+        -4px 0 8px rgba(0, 0, 0, 0.08),
+        4px 0 8px rgba(0, 0, 0, 0.08);
 }
 
+/* ===========================================
+   Filler Under Hero Content
+=========================================== */
+.filler-wrapper {
+    position: absolute;
+    bottom: -1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 600px;
+    /* Same fixed width */
+    height: 3rem;
+    background: linear-gradient(to bottom,
+            #fff7f9 0%,
+            #fff7f9 100%);
+    z-index: 5;
+    /* Under logo stars */
+}
+
+/* ===========================================
+   Floating Logo Stars
+=========================================== */
+.logo-stars {
+    position: absolute;
+    top: 100%;
+    margin-top: -3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.8rem;
+    color: var(--gold-soft);
+    letter-spacing: 5px;
+    z-index: 10;
+    /* Above filler */
+}
+
+/* ===========================================
+   Mobile Responsive - Hero Content
+=========================================== */
 @media (max-width: 768px) {
     .hero-content {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
         width: 90%;
-        height: 60%;
         padding: 2rem;
-        background-color: rgba(255, 247, 249, 0.7);
+        background-color: rgba(255, 247, 249, 0.9);
+        /* slightly less transparent */
         border-radius: 1rem;
+        box-shadow:
+            0 -2px 6px rgba(0, 0, 0, 0.08),
+            -2px 0 6px rgba(0, 0, 0, 0.08),
+            2px 0 6px rgba(0, 0, 0, 0.08);
     }
-}
 
-.logo-stars {
-    position: absolute;
-    top: 90%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 1.4rem;
-    color: var(--gold-soft);
-    margin-top: -3.7rem;
-    letter-spacing: 3px;
-}
-
-/* Mobile fix */
-@media (max-width: 768px) {
     .logo-stars {
         top: 100%;
-        margin-top: -2rem;
-        font-size: 1.2rem;
+        margin-top: -3.4rem;
+        font-size: 1.5rem;
+    }
+
+    .filler-wrapper {
+        display: none;
     }
 }
 
@@ -168,14 +207,14 @@
 =========================================== */
 
 .hero-title {
-    font-size: 2rem;
+    font-size: 2.2rem;
     margin-bottom: 0.4rem;
     margin-top: 0rem;
 }
 
 .hero-subtitle {
     font-size: 1.25rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
 }
 
 /* ===========================================
